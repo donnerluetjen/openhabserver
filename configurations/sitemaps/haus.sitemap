@@ -15,7 +15,7 @@ sitemap Haus	label="Hauptmenue"
 	Frame label="Date" {
 		Text item=Date
 	}
-	Frame label="Weather" {
-		Text item=w
-	}
+//	Frame label="Weather" {
+//		Text item=w
+//	}
 }
