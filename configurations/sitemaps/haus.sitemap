@@ -1,0 +1,21 @@
+sitemap Haus	label="Hauptmenue"
+{
+	Frame {
+		Group item=gOG		label="Obergeschoss"	icon="firstfloor"
+		Group item=gEG		label="Erdgeschoss"		icon="groundfloor"
+		Group item=gOS		label="Outside"			icon="garden"
+	}
+	Frame label="Gruppen" {
+		Text label="Gruppen schalten" icon="rollershutter" {
+			//Switch item=Button_1 label="Rollläden" mapping=[UP="Alle Hoch", DOWN="Alle Runter"]
+			// Experiment!!! If not working, uncomment again the above and encomment the below
+			Switch item=Shutters label="Rollläden [(%d)]" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
+		}
+	}
+	Frame label="Date" {
+		Text item=Date
+	}
+	Frame label="Weather" {
+		Text item=w
+	}
+}

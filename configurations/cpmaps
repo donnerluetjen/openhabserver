@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "copying sitemap to openhab ..."
+scp /Users/Developer/documents/openHAB/runtime/configurations/sitemaps/haus.sitemap pi@openhab:/etc/openhab/configurations/sitemaps/
+echo "Done."
+
+echo "copying items to openhab ..."
+scp /Users/Developer/documents/openHAB/runtime/configurations/items/haus.items pi@openhab:/etc/openhab/configurations/items/
+echo "done"
+
+echo "copying transforms to openhab ..."
+scp /Users/Developer/documents/openHAB/runtime/configurations/transform/* pi@openhab:/etc/openhab/configurations/transform/
+echo "done"
+
+echo "copying images to openhab ..."
+scp /Users/Developer/documents/openhab/runtime/webapps/images/*png pi@openhab:/usr/share/openhab/webapps/images/
+echo "done"
+
