@@ -2,13 +2,15 @@
 lock '3.1.0'
 
 set :application, 'openhab'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :repo_url, 'https://github.com/donnerluetjen/openhabserver.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+set :deploy_via, :remote_cache
+set :deploy_to, '~/applications/openhab'
+set :deploy_user, 'pi'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -33,6 +35,28 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+# files which need to be symlinked to other parts of the
+# filesystem. For example nginx virtualhosts, log rotation
+# init scripts etc.
+# set(:symlinks, [
+#   {
+#     source: "nginx.conf",
+#     link: "/etc/openhab/configurations/#{fetch(:full_app_name)}"
+#   },
+#   {
+#     source: "unicorn_init.sh",
+#     link: "/etc/init.d/unicorn_#{fetch(:full_app_name)}"
+#   },
+#   {
+#     source: "log_rotation",
+#    link: "/etc/logrotate.d/#{fetch(:full_app_name)}"
+#   },
+#   {
+#     source: "monit",
+#     link: "/etc/monit/conf.d/#{fetch(:full_app_name)}.conf"
+#   }
+# ])
 
 namespace :deploy do
 
