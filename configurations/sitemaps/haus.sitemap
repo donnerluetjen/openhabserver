@@ -1,4 +1,4 @@
-sitemap Haus	label="Hauptmenue"
+sitemap Haus	label="Hölderlinstr. 12"
 {
 	Frame {
 		Group item=gOG		label="Obergeschoss"	icon="firstfloor"

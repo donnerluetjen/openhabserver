@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
+# lock '3.1.0'
 
 set :application, 'openhab'
 set :repo_url, 'https://github.com/donnerluetjen/openhabserver.git'
@@ -19,7 +19,7 @@ set :deploy_user, 'pi'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :error
 
 # Default value for :pty is false
 # set :pty, true
@@ -34,7 +34,7 @@ set :deploy_user, 'pi'
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 20
 
 # files which need to be symlinked to other parts of the
 # filesystem. For example nginx virtualhosts, log rotation
