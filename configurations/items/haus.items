@@ -61,7 +61,10 @@ Rollershutter Rolladen_OG_ElternRechts		"Rolladen OG Elternschlafzimmer Rechts"	
 
 /* NTP binding demo item */
 DateTime		Date			"Date [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ ntp="Europe/Berlin:de_DE" }
-String w   "Today [%s]"   <w>  { http="<[http://api.wunderground.com/api/1b4db0ebc337835e/forecast/q/Luxembourg/Luxembourg.xml:3600000:XSLT(wunderground_icon_forecast.xsl)]"}
+//String w   "Today [%s]"   <w>  { http="<[http://api.wunderground.com/api/1b4db0ebc337835e/forecast/q/Luxembourg/Luxembourg.xml:3600000:XSLT(wunderground_icon_forecast.xsl)]"}
+Number   Temperature   "Temperature [%.2f °C]"   {weather="locationId=home, type=temperature, property=current"}
+Number   Humidity      "Humidity [%d %%]"        {weather="locationId=home, type=athmosphere, property=humidity"}
+Number   Pressure	   "Pressure [%.1f hPa]"     {weather="locationId=home, type=athmosphere, property=pressure"}
 
 /*
  * Gartenlicht 					{ knx="1/0/9" }

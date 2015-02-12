@@ -16,6 +16,9 @@ sitemap Haus	label="Hölderlinstr. 12"
 		Text item=Date
 	}
 	Frame label="Weather" {
-		Text item=w
+		Text label="Temperature"
+		Text item=Temperature
+		Text label="Pressure"
+		Text item=Pressure
 	}
 }
