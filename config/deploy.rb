@@ -19,7 +19,8 @@ set :deploy_user, 'pi'
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :error
+# there are :debug, :info, :warn, :error, :fatal
+set :log_level, :info
 
 # Default value for :pty is false
 # set :pty, true
