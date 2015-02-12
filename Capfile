@@ -1,6 +1,9 @@
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
 
+# include the jazzy script
+load 'config/deploy/ext/jazzy'
+
 # Includes default deployment tasks
 require 'capistrano/deploy'
 
