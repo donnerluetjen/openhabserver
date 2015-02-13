@@ -17,6 +17,8 @@ Group EG_Flur			"Flur EG"		<corridor>	(gEG)
 Group OS_Garten			"Garten"		<garden>	(gOS)
 Group OS_Terrasse		"Terrasse"		<garden>	(gOS)
 
+Group WEATHER           "Wetter"
+
 Group:Rollershutter:OR(UP, DOWN) Shutters "Alle Rollläden" <rollershutter> (All)
 Group:Switch:OR(ON, OFF) Lights "Alle Lichter" <light> (All)
 Group:Switch:OR(ON, OFF) Sockets "Alle Außen-Steckdosen" <socket> (All)
@@ -61,9 +63,9 @@ Rollershutter Rolladen_OG_ElternRechts		"Rolladen OG Elternschlafzimmer Rechts"	
 /* NTP binding demo item */
 DateTime Date          "Date [%1$tA, %1$td.%1$tm.%1$tY]"    <calendar>        { ntp="Europe/Berlin:de_DE" }
 
-Number   Temperature   "Temperature [%d °C]"  {weather="locationId=home, type=temperature, property=current"}
-String   Condition     "Bedingungen [%s]"     {weather="locationId=home, type=condition, property=text"}
-Number   Pressure	   "Luftdruck [%d hPa]"   {weather="locationId=home, type=athmosphere, property=pressure"}
+Number   Temperature   "Temperature [%d °C]" (WEATHER) {weather="locationId=home, type=temperature, property=current"}
+String   Condition     "Bedingungen [%s]"    (WEATHER) {weather="locationId=home, type=condition, property=text"}
+//Number   Pressure	   "Luftdruck [%d hPa]"  (WEATHER) {weather="locationId=home, type=athmosphere, property=pressure"}
 
 /*
  * Gartenlicht 					{ knx="1/0/9" }
@@ -93,3 +95,21 @@ Number   Pressure	   "Luftdruck [%d hPa]"   {weather="locationId=home, type=athm
  * YogaRollladenLinks			Lang: { knx="2/0/7" }, kurz: { knx="2/1/7" }
  * YogaRollladenRechts			Lang: { knx="2/0/8" }, kurz: { knx="2/1/8" }
  */
+ 
+ 
+ /* weather layout items */
+DateTime ObservationTime    "[%1$td.%1$tm.%1$tY %1$tH:%1$tM]" (WEATHER) {weather="locationId=home, type=condition, property=observationTime"}
+
+Number   Current_Temp  "cT [%d °C]" (WEATHER) {weather="locationId=home, type=temperature, property=current, scale=1"}
+Number   Pressure                   (WEATHER) {weather="locationId=home type=athmosphere, property=pressure"}
+
+DateTime Forecast_Day_1  "[%1$tA]" (WEATHER) {weather="locationId=home, forecast=1, type=condition, property=observationTime"}
+DateTime Forecast_Day_2  "[%1$tA]" (WEATHER) {weather="locationId=home, forecast=2, type=condition, property=observationTime"}
+
+Number   Temp_Max_0                (WEATHER) {weather="locationId=home, forecast=0, type=temperature, property=max, scale=0"}
+Number   Temp_Max_1                (WEATHER) {weather="locationId=home, forecast=1, type=temperature, property=max, scale=0"}
+Number   Temp_Max_2                (WEATHER) {weather="locationId=home, forecast=2, type=temperature, property=max, scale=0"}
+
+Number   Temp_Min_0                (WEATHER) {weather="locationId=home, forecast=0, type=temperature, property=min, scale=0"}
+Number   Temp_Min_1                (WEATHER) {weather="locationId=home, forecast=1, type=temperature, property=min, scale=0"}
+Number   Temp_Min_2                (WEATHER) {weather="locationId=home, forecast=2, type=temperature, property=min, scale=0"}

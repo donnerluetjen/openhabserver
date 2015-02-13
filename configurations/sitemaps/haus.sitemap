@@ -21,9 +21,12 @@ sitemap haus	label="Hölderlinstr. 12"
 	Frame label="Date" {
 		Text item=Date
 	}
-	Frame label="Weather" {
-		Text item=Temperature icon="temperature" valuecolor=[>25="orange",>15="green",>5="black",<=5="blue"]
-		Text item=Pressure
-		Text item=Condition icon="sun_clouds"
+//	Frame label="Weather" {
+//		Text item=Temperature icon="temperature" valuecolor=[>25="orange",>15="green",>5="black",<=5="blue"]
+//		Text item=Pressure
+//		Text item=Condition icon="sun_clouds"
+//	}
+	Frame {
+		Webview url="/weather?locationId=home&layout=example&iconset=colorful" height=7
 	}
 }
