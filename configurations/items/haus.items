@@ -20,6 +20,7 @@ Group OS_Garten			"Garten"		<garden>	(gOS)
 Group OS_Terrasse		"Terrasse"		<garden>	(gOS)
 
 Group:Rollershutter:OR(UP, DOWN) Shutters "Alle Rollläden [(%d)]" <rollershutter> (All)
+Group:Switch:OR(ON, OFF) Lights "Alle Lichter" <light> (All)
 // Lights
 
 Switch Licht_OS_Garten				"Licht Garten"				<outdoorlight>		(OS_Garten)		{ knx="1/0/9" }
@@ -61,9 +62,11 @@ Rollershutter Rolladen_OG_ElternRechts		"Rolladen OG Elternschlafzimmer Rechts"	
 
 /* NTP binding demo item */
 DateTime		Date			"Date [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ ntp="Europe/Berlin:de_DE" }
-//String w   "Today [%s]"   <w>  { http="<[http://api.wunderground.com/api/1b4db0ebc337835e/forecast/q/Luxembourg/Luxembourg.xml:3600000:XSLT(wunderground_icon_forecast.xsl)]"}
+
 Number   Temperature   "Temperature [%.2f °C]"   {weather="locationId=home, type=temperature, property=current"}
-Number   Humidity      "Humidity [%d %%]"        {weather="locationId=home, type=athmosphere, property=humidity"}
+//Number   Wind		   "Wind [%d]"               {weather="locationID=home, type=wind, property=speed"}
+//Number   Chill       "Chillfactor"             {weather="locationID=home, type=wind, property=chill"}
+String   Condition     "Condition [%s]"          {weather="locationId=home, type=condition, property=text"}
 Number   Pressure	   "Pressure [%.1f hPa]"     {weather="locationId=home, type=athmosphere, property=pressure"}
 
 /*

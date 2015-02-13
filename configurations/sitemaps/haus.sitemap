@@ -7,18 +7,16 @@ sitemap Haus	label="Hölderlinstr. 12"
 	}
 	Frame label="Gruppen" {
 		Text label="Gruppen schalten" icon="rollershutter" {
-			//Switch item=Button_1 label="Rollläden" mapping=[UP="Alle Hoch", DOWN="Alle Runter"]
-			// Experiment!!! If not working, uncomment again the above and encomment the below
 			Switch item=Shutters label="Rollläden [(%d)]" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
+			Switch item=Lights label="Lichter"
 		}
 	}
 	Frame label="Date" {
 		Text item=Date
 	}
 	Frame label="Weather" {
-		Text label="Temperature"
 		Text item=Temperature
-		Text label="Pressure"
 		Text item=Pressure
+		Text item=Condition
 	}
 }
