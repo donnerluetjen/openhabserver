@@ -7,9 +7,15 @@ sitemap Haus	label="Hölderlinstr. 12"
 	}
 	Frame {
 		Text label="Gruppen schalten" icon="none" {
-			Switch item=Shutters label="Rollläden [(%d)]" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
-			Switch item=Lights label="Lichter"
-			Switch item=Sockets label="Außensteckdosen"
+			Frame {
+			Switch item=Shutters label="Alle Rollläden" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
+			}
+			Frame {
+			Switch item=Lights label="Alle Lichter"
+			}
+			Frame {
+			Switch item=Sockets label="Alle Außensteckdosen"
+			}
 		}
 	}
 	Frame label="Date" {
