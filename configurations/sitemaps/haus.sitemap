@@ -1,9 +1,9 @@
-sitemap Haus	label="Hölderlinstr. 12"
+sitemap haus	label="Hölderlinstr. 12"
 {
 	Frame {
 		Group item=gOG		label="Obergeschoss"	icon="firstfloor"
 		Group item=gEG		label="Erdgeschoss"		icon="groundfloor"
-		Group item=gOS		label="Outside"			icon="garden"
+		Group item=gOS		label="Außen"			icon="garden"
 	}
 	Frame {
 		Text label="Gruppen schalten" icon="none" {

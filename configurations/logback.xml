@@ -38,7 +38,7 @@
 	</logger>
 
 	<logger name="org.openhab" level="INFO"/>
-	<logger name="org.openhab.binding.weather" level="INFO" />
+	<logger name="org.openhab.binding.weather" level="TRACE" />
 
 	<!-- this class gives an irrelevant warning at startup -->
 	<logger name="org.atmosphere.cpr.AtmosphereFramework" level="ERROR" />
