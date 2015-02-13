@@ -5,8 +5,8 @@ sitemap Haus	label="Hölderlinstr. 12"
 		Group item=gEG		label="Erdgeschoss"		icon="groundfloor"
 		Group item=gOS		label="Outside"			icon="garden"
 	}
-	Frame label="Gruppen" {
-		Text label="Gruppen schalten" icon="rollershutter" {
+	Frame {
+		Text label="Gruppen schalten" icon="none" {
 			Switch item=Shutters label="Rollläden [(%d)]" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
 			Switch item=Lights label="Lichter"
 			Switch item=Sockets label="Außensteckdosen"
@@ -16,8 +16,8 @@ sitemap Haus	label="Hölderlinstr. 12"
 		Text item=Date
 	}
 	Frame label="Weather" {
-		Text item=Temperature
+		Text item=Temperature icon="temperature" valuecolor=[>25="orange",>15="green",>5="black",<=5="blue"]
 		Text item=Pressure
-		Text item=Condition
+		Text item=Condition icon="sun_clouds"
 	}
 }
