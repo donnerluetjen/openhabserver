@@ -27,19 +27,16 @@ Group:Switch:OR(ON, OFF) Sockets "Alle Außen-Steckdosen" <socket> (All)
 Switch Licht_OS_Garten				"Licht Garten"				<outdoorlight>		(OS_Garten, Lights)		{ knx="1/0/9" }
 Switch Licht_OS_Terrasse			"Licht Terrasse"			<outdoorlight>		(OS_Terrasse, Lights)	{ knx="1/0/8" }
 Switch Licht_OS_Weg					"Wegbeleuchtung"			<outdoorlight>		(gOS, Lights)			{ knx="1/0/7" }
+Switch Licht_OS_Haustuer            "Haustürbeleuchtung"        <outdoorlight>      (gOS, Lights)           { knx="7/0/7" }
 Switch Licht_EG_Wohnzimmer_Tisch	"Wohnzimmer Tischlicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/1" }
-//Dimmer Dimmer_EG_Wohnzimmer_Tisch	"Wohnzimmer Tischlicht [%d %%]"	<slider>		(EG_Wohnzimmer)
-//Dimmer Licht_EG_Wohnzimmer_Decke	"Wohnzimmer Deckenlicht"	<light>				(EG_Wohnzimmer)
 Switch Licht_EG_Wohnzimmer_Wand		"Wohnzimmer Wandlicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/4" }
-//Dimmer Licht_EG_Wohnzimmer_Wand	"Wohnzimmer Wandlicht"		<light>				(EG_Wohnzimmer)
 Switch Licht_EG_Wohnzimmer_Anbau	"Wohnzimmer Anbaulicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/0" }
-//Dimmer Licht_EG_Wohnzimmer_Anbau	"Wohnzimmer Anbaulicht"		<light>				(EG_Wohnzimmer)
 Switch Licht_OG_Flur_Decke			"Flur OG Deckenlicht"		<light>				(OG_Flur, Lights)		{ knx="1/0/5" }
 Switch Licht_OG_Flur_Wand			"Flur OG Wandlicht"			<light>				(OG_Flur, Lights)		{ knx="1/0/6" }
 
 // Sockets
 
-Switch Steckdose_OS_Garten			"Strom Garten"				<socket>			(OS_Garten, Sockets)		{ knx="3/1/1" }
+Switch Steckdose_OS_Garten			"Strom Garten"				<socket>			(OS_Garten, Sockets)	{ knx="3/1/1" }
 Switch Steckdose_OS_Terrasse		"Strom Terrasse"			<socket>			(OS_Terrasse, Sockets)	{ knx="3/1/0" }
 
 // Shutters
@@ -64,7 +61,7 @@ Rollershutter Rolladen_OG_ElternRechts		"Rolladen OG Elternschlafzimmer Rechts"	
 /* NTP binding demo item */
 DateTime Date          "Date [%1$tA, %1$td.%1$tm.%1$tY]"    <calendar>        { ntp="Europe/Berlin:de_DE" }
 
-Number   Temperature   "Temperature [%.2f °C]"   {weather="locationId=home, type=temperature, property=current"}
+Number   Temperature   "Temperature [%d °C]"  {weather="locationId=home, type=temperature, property=current"}
 String   Condition     "Bedingungen [%s]"     {weather="locationId=home, type=condition, property=text"}
 Number   Pressure	   "Luftdruck [%d hPa]"   {weather="locationId=home, type=athmosphere, property=pressure"}
 
@@ -74,6 +71,7 @@ Number   Pressure	   "Luftdruck [%d hPa]"   {weather="locationId=home, type=athm
  * Terrassenlicht 				{ knx="1/0/8" }
  * Terrassenstrom 				{ knx="3/1/0" }
  * Wegbeleuchtung				{ knx="1/0/7" }
+ * Haustürbeleuchtung           { knx="7/0/7" }
  * 
  * KücheRolladenTüre			{ knx="2/0/3" }
  * KücheRolladenFensterLinks	{ knx="2/0/2" }
