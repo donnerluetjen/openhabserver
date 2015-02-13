@@ -21,25 +21,26 @@ Group OS_Terrasse		"Terrasse"		<garden>	(gOS)
 
 Group:Rollershutter:OR(UP, DOWN) Shutters "Alle Rollläden [(%d)]" <rollershutter> (All)
 Group:Switch:OR(ON, OFF) Lights "Alle Lichter" <light> (All)
+Group:Switch:OR(ON, OFF) Sockets "Alle Außen-Steckdosen" <socket> (All)
 // Lights
 
-Switch Licht_OS_Garten				"Licht Garten"				<outdoorlight>		(OS_Garten)		{ knx="1/0/9" }
-Switch Licht_OS_Terrasse			"Licht Terrasse"			<outdoorlight>		(OS_Terrasse)	{ knx="1/0/8" }
-Switch Licht_OS_Weg					"Wegbeleuchtung"			<outdoorlight>		(gOS)			{ knx="1/0/7" }
-Switch Licht_EG_Wohnzimmer_Tisch	"Wohnzimmer Tischlicht"		<light>				(EG_Wohnzimmer)	{ knx="1/0/1" }
+Switch Licht_OS_Garten				"Licht Garten"				<outdoorlight>		(OS_Garten, Lights)		{ knx="1/0/9" }
+Switch Licht_OS_Terrasse			"Licht Terrasse"			<outdoorlight>		(OS_Terrasse, Lights)	{ knx="1/0/8" }
+Switch Licht_OS_Weg					"Wegbeleuchtung"			<outdoorlight>		(gOS, Lights)			{ knx="1/0/7" }
+Switch Licht_EG_Wohnzimmer_Tisch	"Wohnzimmer Tischlicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/1" }
 Dimmer Dimmer_EG_Wohnzimmer_Tisch	"Wohnzimmer Tischlicht [%d %%]"	<slider>		(EG_Wohnzimmer)
 //Dimmer Licht_EG_Wohnzimmer_Decke	"Wohnzimmer Deckenlicht"	<light>				(EG_Wohnzimmer)
-Switch Licht_EG_Wohnzimmer_Wand		"Wohnzimmer Wandlicht"		<light>				(EG_Wohnzimmer)	{ knx="1/0/4" }
+Switch Licht_EG_Wohnzimmer_Wand		"Wohnzimmer Wandlicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/4" }
 //Dimmer Licht_EG_Wohnzimmer_Wand	"Wohnzimmer Wandlicht"		<light>				(EG_Wohnzimmer)
-Switch Licht_EG_Wohnzimmer_Anbau	"Wohnzimmer Anbaulicht"		<light>				(EG_Wohnzimmer)	{ knx="1/0/0" }
+Switch Licht_EG_Wohnzimmer_Anbau	"Wohnzimmer Anbaulicht"		<light>				(EG_Wohnzimmer, Lights)	{ knx="1/0/0" }
 //Dimmer Licht_EG_Wohnzimmer_Anbau	"Wohnzimmer Anbaulicht"		<light>				(EG_Wohnzimmer)
-Switch Licht_OG_Flur_Decke			"Flur OG Deckenlicht"		<light>				(OG_Flur)		{ knx="1/0/5" }
-Switch Licht_OG_Flur_Wand			"Flur OG Wandlicht"			<light>				(OG_Flur)		{ knx="1/0/6" }
+Switch Licht_OG_Flur_Decke			"Flur OG Deckenlicht"		<light>				(OG_Flur, Lights)		{ knx="1/0/5" }
+Switch Licht_OG_Flur_Wand			"Flur OG Wandlicht"			<light>				(OG_Flur, Lights)		{ knx="1/0/6" }
 
 // Sockets
 
-Switch Steckdose_OS_Garten			"Strom Garten"				<socket>			(OS_Garten)		{ knx="3/1/1" }
-Switch Steckdose_OS_Terrasse		"Strom Terrasse"			<socket>			(OS_Terrasse)	{ knx="3/1/0" }
+Switch Steckdose_OS_Garten			"Strom Garten"				<socket>			(OS_Garten, Sockets)		{ knx="3/1/1" }
+Switch Steckdose_OS_Terrasse		"Strom Terrasse"			<socket>			(OS_Terrasse, Sockets)	{ knx="3/1/0" }
 
 // Shutters
 

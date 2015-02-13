@@ -9,6 +9,7 @@ sitemap Haus	label="Hölderlinstr. 12"
 		Text label="Gruppen schalten" icon="rollershutter" {
 			Switch item=Shutters label="Rollläden [(%d)]" mappings=[UP="Alle Runter",DOWN="Alle Hoch"]
 			Switch item=Lights label="Lichter"
+			Switch item=Sockets label="Außensteckdosen"
 		}
 	}
 	Frame label="Date" {
