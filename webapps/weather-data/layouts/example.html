@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" CONTENT="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="weather-data/layouts/example.css" />
+	<script type="text/javascript" src="weather-data/layouts/example.js"></script>
+</head>
+
+<body id="weather-body" onload="formatIframe()">
+	<div id="weather-location-name">${config:name}, ${item:ObservationTime}</div>
+
+	<table id="weather-table">
+		<tr>
+			<td rowspan="2"><img id="weather-icon" src="weather-data/images/${param:iconset}/${weather:condition.commonId}.png"/></td>
+			<td id="weather-temp">${item:Current_Temp.value}</td>
+			<td id="weather-temp-sign">°C</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table id="weather-table-details">
+					<tr>
+						<td>Humidity:</td>
+						<td>${weather:athmosphere.humidity} %</td>
+					</tr>
+					<tr>
+						<td>Pressure:</td>
+						<td>${item:Pressure.value} mb</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<table id="weather-forecast-table">
+		<tr>
+			<td>Today</td>
+			<td>${item:Forecast_Day_1}</td>
+			<td>${item:Forecast_Day_2}</td>
+		</tr>
+		<tr>
+			<td><img src="weather-data/images/${param:iconset}/${forecast(0):condition.commonId}.png"/></td>
+			<td><img src="weather-data/images/${param:iconset}/${forecast(1):condition.commonId}.png"/></td>
+			<td><img src="weather-data/images/${param:iconset}/${forecast(2):condition.commonId}.png"/></td>
+		</tr>
+		<tr>
+			<td class="temp-max">${item:Temp_Max_0.value}</td>
+			<td class="temp-max">${item:Temp_Max_1.value}</td>
+			<td class="temp-max">${item:Temp_Max_2.value}</td>
+		</tr>
+		<tr>
+			<td class="temp-min">${item:Temp_Min_0.value}</td>
+			<td class="temp-min">${item:Temp_Min_1.value}</td>
+			<td class="temp-min">${item:Temp_Min_2.value}</td>
+		</tr>
+	</table>
+
+</body>
+
+</html>
