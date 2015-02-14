@@ -23,6 +23,7 @@ table {
 #weather-temp {
 	font-size: 35px;
 	width: 1px;
+	text-align: center;
 }
 
 #weather-temp-sign {
@@ -39,6 +40,18 @@ table {
 	white-space: nowrap;
 }
 
+.weather-details-name {
+	text-align: right;
+}
+
+.weather-details-value {
+	text-align: right;
+}
+
+.weather-details-unit {
+	text-align: left;
+}
+
 #weather-forecast-table img {
 	width: 70px;
 	height: 70px;
@@ -51,9 +64,13 @@ table {
 #weather-forecast-table .temp-max {
 	font-size: 18px;
 	color: red;
+	text-align: right;
+	padding-right: 28px;
 }
 
 #weather-forecast-table .temp-min {
 	font-size: 16px;
 	color: blue;
+	text-align: right;
+	padding-right: 29px;
 }

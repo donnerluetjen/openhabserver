@@ -19,12 +19,21 @@
 			<td colspan="2">
 				<table id="weather-table-details">
 					<tr>
-						<td>Humidity:</td>
-						<td>${weather:athmosphere.humidity} %</td>
+						<!-- <td>Humidity:</td>
+						<td>${weather:athmosphere.humidity} %</td> -->
+						<td class="weather-details-name">Wind:</td>
+						<td class="weather-details-value">${item:Wind_Speed.value}</td>
+						<td class="weather-details-unit">&nbspkm/h</td>
 					</tr>
 					<tr>
-						<td>Pressure:</td>
-						<td>${item:Pressure.value} mb</td>
+						<td class="weather-details-name">Feels like:</td>
+						<td class="weather-details-value">${item:Temp_Feel.value}</td>
+						<td class="weather-details-unit">&nbsp°C</td>
+					</tr>
+					<tr>
+						<td class="weather-details-name">Pressure:</td>
+						<td class="weather-details-value">${item:Pressure.value}</td>
+						<td class="weather-details-unit">&nbsphPa</td>
 					</tr>
 				</table>
 			</td>
