@@ -1,0 +1,27 @@
+
+Gartenlicht                 { knx="1/0/9" }
+Gartenstrom                 { knx="3/1/1" }
+Terrassenlicht              { knx="1/0/8" }
+Terrassenstrom              { knx="3/1/0" }
+Wegbeleuchtung              { knx="1/0/7" }
+Haustürbeleuchtung          { knx="7/0/7" }
+
+KücheRolladenTüre           { knx="2/0/3" }
+KücheRolladenFensterLinks   { knx="2/0/2" }
+KücheRolladenFensterRechts  { knx="2/0/1" }
+GästebadRolladen            { knx="2/0/4" }
+EGOfficeRollladen           { knx="2/0/0" }
+KücheGästebadRolladenAlle   { knx="2/0/13" }
+WohnzimmerRolladen          { knx="2/0/5" }
+WohnzimmerLichtWand         { knx="1/0/4" }
+WohnzimmerLichtTisch        { knx="1/0/1" }
+WohnzimmerLichtAnbau        { knx="1/0/0" }
+Flurdeckenlicht             { knx="1/0/5" }
+Flurwandlicht               { knx="1/0/6" }
+ElternschlafzimmerRollladenRechts           Lang: { knx="2/0/12" }, kurz: { knx="2/1/12" }
+ElternschlafzimmerRollladenLinks            Lang: { knx="2/0/11" }, kurz: { knx="2/1/11" }
+ElternschlafzimmerBalkonRollladenRechts     Lang: { knx="2/0/9" }, kurz: { knx="2/1/9" }
+ElternschlafzimmerBalkonRollladenLinks      Lang: { knx="2/0/10" }, kurz: { knx="2/1/10" }
+OGFlurRollladen                             Lang: { knx="2/0/6" }, kurz: { knx="2/1/6" }
+YogaRollladenLinks                          Lang: { knx="2/0/7" }, kurz: { knx="2/1/7" }
+YogaRollladenRechts                         Lang: { knx="2/0/8" }, kurz: { knx="2/1/8" }

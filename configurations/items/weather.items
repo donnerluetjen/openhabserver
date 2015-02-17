@@ -1,0 +1,17 @@
+DateTime ObservationTime    "[%1$td.%1$tm.%1$tY %1$tH:%1$tM]" (WEATHER) {weather="locationId=home, type=condition, property=observationTime"}
+
+Number   Current_Temp              (WEATHER) {weather="locationId=home, type=temperature, property=current, scale=0"}
+Number   Pressure                  (WEATHER) {weather="locationId=home, type=athmosphere, property=pressure, scale=0"}
+Number   Wind_Speed                (WEATHER) {weather="locationId=home, type=wind, property=speed, scale=0"}
+Number   Temp_Feel                 (WEATHER) {weather="locationId=home, type=temperature, property=feel, scale=0"}
+
+DateTime Forecast_Day_1  "[%1$tA]" (WEATHER) {weather="locationId=home, forecast=1, type=condition, property=observationTime"}
+DateTime Forecast_Day_2  "[%1$tA]" (WEATHER) {weather="locationId=home, forecast=2, type=condition, property=observationTime"}
+
+Number   Temp_Max_0                (WEATHER) {weather="locationId=home, forecast=0, type=temperature, property=max, scale=0"}
+Number   Temp_Max_1                (WEATHER) {weather="locationId=home, forecast=1, type=temperature, property=max, scale=0"}
+Number   Temp_Max_2                (WEATHER) {weather="locationId=home, forecast=2, type=temperature, property=max, scale=0"}
+
+Number   Temp_Min_0                (WEATHER) {weather="locationId=home, forecast=0, type=temperature, property=min, scale=0"}
+Number   Temp_Min_1                (WEATHER) {weather="locationId=home, forecast=1, type=temperature, property=min, scale=0"}
+Number   Temp_Min_2                (WEATHER) {weather="locationId=home, forecast=2, type=temperature, property=min, scale=0"}

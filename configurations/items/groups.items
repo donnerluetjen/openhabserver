@@ -1,0 +1,23 @@
+Group All
+Group gEG (All)
+Group gOG (All)
+Group gOS (All)
+
+Group OG_Eltern			"Eltern Schlafzimmer"	<bedroom>	(gOG)
+Group OG_Yogazimmer		"Yogazimmer"			<boy1>		(gOG)
+Group OG_Flur			"Flur OG"				<corridor>	(gOG)
+
+Group EG_Kueche			"Kueche"		<kitchen>	(gEG)
+Group EG_GaesteBad		"WC"			<bath>		(gEG)
+Group EG_Wohnzimmer		"Wohnzimmer"	<sofa>		(gEG)
+Group EG_Office			"Elfis Büro"	<office> 	(gEG)
+Group EG_Flur			"Flur EG"		<corridor>	(gEG)
+
+Group OS_Garten			"Garten"		<garden>	(gOS)
+Group OS_Terrasse		"Terrasse"		<garden>	(gOS)
+
+Group WEATHER           "Wetter"
+
+Group:Rollershutter:OR(UP, DOWN) Shutters "Alle Rollläden" <rollershutter> (All)
+Group:Switch:OR(ON, OFF) Lights "Alle Lichter" <light> (All)
+Group:Switch:OR(ON, OFF) Sockets "Alle Außen-Steckdosen" <socket> (All)

@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" design="metal" xsi:noNamespaceSchemaLocation="../visu_config.xsd" enable_column_adjustment="true" bind_click_to_widget="false" scroll_speed="0" lib_version="5">
+<!--
+
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" design="metal" xsi:noNamespaceSchemaLocation="visu_config.xsd" enable_column_adjustment="true" bind_click_to_widget="true" scroll_speed="0" xxscreensave_time="60" xxscreensave_page="Start">
+-->
+<!--
+
+default_columns="12" min_column_width="100" scroll_speed="0" max_mobile_screen_width="640" bind_click_to_widget="true">
+-->
+<meta>
+<plugins>
+<plugin name="diagram"/>
+<!--  <plugin name="gweather"/>  -->
+<plugin name="clock"/>
+<plugin name="rsslog"/>
+<plugin name="upnpcontroller"/>
+<plugin name="strftime"/>
+<plugin name="timeout"/>
+</plugins>
+<mappings>
+<mapping name="Auf_Ab">
+<entry value="0">Auf</entry>
+<entry value="1">Ab</entry>
+</mapping>
+<mapping name="Stop">
+<entry value="1">Stop</entry>
+</mapping>
+<mapping name="Auf_Ab_Icon">
+<entry value="0">
+<icon name="steuer_auf"/>
+Auf
+</entry>
+<entry value="1">
+<icon name="steuer_ab"/>
+Ab
+</entry>
+</mapping>
+<mapping name="Stop_Icon">
+<entry value="1">
+<icon name="audio_stop"/>
+Stop
+</entry>
+</mapping>
+<mapping name="Close_Open">
+<entry value="0">zu</entry>
+<entry value="1">offen</entry>
+</mapping>
+<mapping name="Open_Close">
+<entry value="0">offen</entry>
+<entry value="1">zu</entry>
+</mapping>
+<mapping name="Off_On">
+<entry value="0">Aus</entry>
+<entry value="1">An</entry>
+</mapping>
+<mapping name="On_Off">
+<entry value="0">An</entry>
+<entry value="1">Aus</entry>
+</mapping>
+<mapping name="GesamtAufZu">
+<entry value="0">Alle Zu</entry>
+<entry value="1">Auf</entry>
+</mapping>
+<mapping name="DraenageVoll">
+<entry value="0">Leer</entry>
+<entry value="1">Voll</entry>
+</mapping>
+<mapping name="AufZuTuerSymbol">
+<entry value="0">
+<icon name="fts_door" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="fts_door_open" flavour="red"/>
+</entry>
+</mapping>
+<mapping name="KonnexHVACSymbol">
+<entry value="0">
+<icon name="status_automatic" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="status_available" flavour="white"/>
+</entry>
+<entry value="2">
+<icon name="status_away_1" flavour="white"/>
+</entry>
+<entry value="3">
+<icon name="status_night" flavour="white"/>
+</entry>
+<entry value="4">
+<icon name="status_frost" flavour="white"/>
+</entry>
+</mapping>
+<mapping name="ZwangKonnexHVACSymbol">
+<entry value="0">
+<icon name="time_automatic" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="time_manual_mode" flavour="white"/>
+<icon name="status_available" flavour="white"/>
+</entry>
+<entry value="2">
+<icon name="time_manual_mode" flavour="white"/>
+<icon name="status_away_1" flavour="white"/>
+</entry>
+<entry value="3">
+<icon name="time_manual_mode" flavour="white"/>
+<icon name="status_night" flavour="white"/>
+</entry>
+<entry value="4">
+<icon name="time_manual_mode" flavour="white"/>
+<icon name="status_frost" flavour="white"/>
+</entry>
+</mapping>
+<mapping name="AnAusSymbolxxx">
+<entry value="0">
+<icon name="light_light" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="light_light_dim_100" flavour="green"/>
+</entry>
+</mapping>
+<mapping name="AnAusSymbol">
+<entry value="0">
+<icon name="control_home" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="control_on_off" flavour="green"/>
+</entry>
+</mapping>
+<mapping name="AnAusSymbolGesamtText">
+<entry value="0">
+<icon name="control_home" flavour="white"/>
+Gesamt Aus
+</entry>
+<entry value="1">
+<icon name="control_on_off" flavour="green"/>
+Gesamt Ein
+</entry>
+</mapping>
+<mapping name="UpDown">
+<entry value="0">
+<icon name="control_arrow_up"/>
+</entry>
+<entry value="1">
+<icon name="control_arrow_down"/>
+</entry>
+</mapping>
+<mapping name="Stop">
+<entry value="1">
+<icon name="message_stop"/>
+</entry>
+</mapping>
+<mapping name="Jalousie">
+<entry value="0">
+<icon name="fts_window_2w"/>
+</entry>
+<entry range_min="0.01" range_max="14.99">
+<icon name="fts_shutter_10"/>
+</entry>
+<entry range_min="15" range_max="24.99">
+<icon name="fts_shutter_20"/>
+</entry>
+<entry range_min="25" range_max="34.99">
+<icon name="fts_shutter_30"/>
+</entry>
+<entry range_min="35" range_max="44.99">
+<icon name="fts_shutter_40"/>
+</entry>
+<entry range_min="45" range_max="54.99">
+<icon name="fts_shutter_50"/>
+</entry>
+<entry range_min="55" range_max="64.99">
+<icon name="fts_shutter_60"/>
+</entry>
+<entry range_min="65" range_max="74.99">
+<icon name="fts_shutter_70"/>
+</entry>
+<entry range_min="75" range_max="84.99">
+<icon name="fts_shutter_80"/>
+</entry>
+<entry range_min="85" range_max="99.99">
+<icon name="fts_shutter_90"/>
+</entry>
+<entry value="100">
+<icon name="fts_shutter_100"/>
+</entry>
+</mapping>
+<mapping name="STOP">
+<entry value="0">STOP</entry>
+<entry value="1">STOP</entry>
+</mapping>
+<mapping name="Freigegeben_Nichtfreigegeben">
+<entry value="0">
+<icon name="light_outdoor" color="green" styling="height:32px; width:32px;"/>
+Nicht Freigegeben
+</entry>
+<entry value="1">
+<icon name="light_outdoor" color="red" styling="height:32px; width:32px;"/>
+Freigegeben
+</entry>
+</mapping>
+<mapping name="AllOff">
+<entry value="0">
+<icon name="control_all_on_off" color="green"/>
+Licht Gesamt Aus
+</entry>
+<entry value="1">
+<icon name="control_all_on_off" color="red"/>
+Licht Gesamt Ein
+</entry>
+</mapping>
+<mapping name="AllOffIcon">
+<entry value="0">
+<icon name="control_all_on_off" color="green"/>
+</entry>
+<entry value="1">
+<icon name="control_all_on_off" color="red"/>
+</entry>
+</mapping>
+<mapping name="Anwesend_Abwesend">
+<entry value="0">
+<icon name="status_available" color="green" styling="height:32px; width:32px;"/>
+Anwesend
+</entry>
+<entry value="1">
+<icon name="status_away_2" color="red" styling="height:32px; width:32px;"/>
+Abwesend
+</entry>
+</mapping>
+<mapping name="Automatic_Manual">
+<entry value="0">
+<icon name="time_automatic" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="1">
+<icon name="time_manual_mode" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="JalousienEG">
+<entry value="0">
+<icon name="control_building_modern_s_eg" color="white" styling="height:32px; width:32px;"/>
+<icon name="fts_shutter" color="green"/>
+Offen
+</entry>
+<entry value="1">
+<icon name="control_building_modern_s_eg" color="red" styling="height:32px; width:32px;"/>
+<icon name="fts_shutter_100" color="red"/>
+Offen
+</entry>
+</mapping>
+<mapping name="LichtEG">
+<entry value="0">
+<icon name="control_building_modern_s_eg" color="grey" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="1">
+<icon name="control_building_modern_s_eg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="LichtOG">
+<entry value="0">
+<icon name="control_building_modern_s_og" color="white" type="32" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="1">
+<icon name="control_building_modern_s_og" color="red" type="32" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="LichtDG">
+<entry value="0">
+<icon name="control_building_modern_s_dg" color="white" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="1">
+<icon name="control_building_modern_s_dg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="LichtKG">
+<entry value="0">
+<icon name="control_building_modern_s_kg" color="white" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="1">
+<icon name="control_building_modern_s_kg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="LichtAussen">
+<entry value="0">Außen</entry>
+<entry value="1">Außen</entry>
+</mapping>
+<mapping name="FensterEG">
+<entry value="0">
+<icon name="control_building_modern_s_eg" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="89">
+<icon name="control_building_modern_s_eg" color="orange" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="255">
+<icon name="control_building_modern_s_eg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="FensterOG">
+<entry value="0">
+<icon name="control_building_modern_s_og" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="89">
+<icon name="control_building_modern_s_og" color="orange" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="255">
+<icon name="control_building_modern_s_og" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="FensterDG">
+<entry value="0">
+<icon name="control_building_modern_s_dg" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="89">
+<icon name="control_building_modern_s_dg" color="orange" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="255">
+<icon name="control_building_modern_s_dg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="FensterKG">
+<entry value="0">
+<icon name="control_building_modern_s_kg" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="89">
+<icon name="control_building_modern_s_kg" color="orange" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="255">
+<icon name="control_building_modern_s_kg" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="Eingangstuer">
+<entry value="0">
+<icon name="fts_door" color="green" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="89">
+<icon name="fts_door" color="orange" styling="height:32px; width:32px;"/>
+</entry>
+<entry value="255">
+<icon name="fts_door_open" color="red" styling="height:32px; width:32px;"/>
+</entry>
+</mapping>
+<mapping name="StatusBewaesserung">
+<entry value="0">
+<icon name="sani_sprinkling" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="sani_sprinkling" color="green" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+</mapping>
+<mapping name="StatusLichtGesamt">
+<entry value="0">
+<icon name="light_light" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="light_light" color="orange" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusFensterGesamt">
+<entry value="0">
+<icon name="fts_window_2w" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="89">
+<icon name="fts_window_2w_tilt_l" color="orange" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="255">
+<icon name="fts_window_2w_open_l" color="red" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusHaustuerGesamt">
+<entry value="0">
+<icon name="status_locked" color="green" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="89">
+<icon name="status_open" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="255">
+<icon name="fts_door_open" color="red" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+</mapping>
+<mapping name="StatusAnwesend">
+<entry value="0">
+<icon name="status_available" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="status_away_2" color="orange" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusAnrufliste">
+<entry value="0">
+<icon name="phone_missed_in" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="phone_missed_in" color="orange" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusAttention">
+<entry value="0">
+<icon name="message_attention" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="message_attention" color="red" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusGarbage">
+<entry value="0">
+<icon name="message_garbage" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="message_garbage" color="blue" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+</mapping>
+<mapping name="StatusPost">
+<entry value="0">
+<icon name="message_mail" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="message_mail_open" color="green" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusWetterRegen">
+<entry value="0">
+<icon name="weather_rain" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="weather_rain" color="orange" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="StatusWetterWarnung">
+<entry value="0">
+<icon name="weather_storm" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="weather_storm" color="red" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+</mapping>
+<mapping name="StatusWetterWarnungStufen">
+<entry value="0">
+<icon name="weather_storm" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="weather_storm" color="green" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="2">
+<icon name="weather_storm" color="yellow" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="3">
+<icon name="weather_storm" color="orange" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+<entry value="4">
+<icon name="weather_storm" color="red" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+<entry value="5">
+<icon name="weather_storm" color="purple" styling="height:56px; width:56px;" class="blink"/>
+</entry>
+</mapping>
+<mapping name="StatusLichtBewegungAussen">
+<entry value="0">
+<icon name="light_outdoor" color="grey" styling="height:56px; width:56px;"/>
+</entry>
+<entry value="1">
+<icon name="light_outdoor" color="red" styling="height:56px; width:56px;"/>
+</entry>
+</mapping>
+<mapping name="AufAbSymbol">
+<entry value="0">
+<!--  <icon name="control_arrow_up"/>  -->
+<icon name="fts_shutter_up"/>
+</entry>
+<entry value="1">
+<!--  <icon name="control_arrow_down"/>  -->
+<icon name="fts_shutter_down"/>
+</entry>
+</mapping>
+<mapping name="HaltSymbol">
+<entry value="0"></entry>
+<entry value="1">
+<icon name="control_x"/>
+</entry>
+</mapping>
+<mapping name="AufZuFensterSymbol">
+<entry value="0">
+<icon name="fts_window_2w" color="green"/>
+</entry>
+<entry value="1">
+<icon name="fts_window_2w_open" color="red"/>
+Geöffnet
+</entry>
+<entry value="255">
+<icon name="fts_window_2w_open" color="red"/>
+Geöffnet
+</entry>
+<entry value="89">
+<icon name="fts_window_2w_tilt" color="orange"/>
+Gekippt
+</entry>
+</mapping>
+<mapping name="AufZuTuerSymbol">
+<entry value="0">
+<icon name="fts_door" flavour="white"/>
+</entry>
+<entry value="1">
+<icon name="fts_door_open" flavour="red"/>
+</entry>
+</mapping>
+<mapping name="UpDownRollo">
+<entry value="0">
+<icon name="fts_shutter" color="green"/>
+</entry>
+<entry value="1">
+<icon name="fts_shutter_100" color="red"/>
+</entry>
+</mapping>
+<mapping name="KonnexHVAC">
+<entry value="auto">Auto</entry>
+<entry value="comfort">Komfort</entry>
+<entry value="standby">Stand By</entry>
+<entry value="economy">Economy</entry>
+<entry value="building_protection">Haus-Schutz</entry>
+</mapping>
+<mapping name="LuftdruckTrend">
+<entry range_min="0.1" range_max="100">
+<icon name="message_tendency_upward" color="green"/>
+</entry>
+<entry range_min="0" range_max="0">
+<icon name="message_tendency_steady" color="orange"/>
+</entry>
+<entry range_min="-100" range_max="-0.1">
+<icon name="message_tendency_downward" color="red"/>
+</entry>
+<!--
+
+        <entry range_min="0.1" range_max="10">steigend</entry>
+        <entry range_min="0" range_max="0">gleichbleibend</entry>
+        <entry range_min="-10" range_max="-0.1">fallend</entry>
+-->
+</mapping>
+<mapping name="TemperaturTrend">
+<entry range_min="0.1" range_max="100">
+<icon name="message_tendency_upward" color="green"/>
+</entry>
+<entry range_min="0" range_max="0">
+<icon name="message_tendency_steady" color="orange"/>
+</entry>
+<entry range_min="-100" range_max="-0.1">
+<icon name="message_tendency_downward" color="red"/>
+</entry>
+</mapping>
+<mapping name="WindKMH">
+<entry range_min="0" range_max="2">Windstille</entry>
+<entry range_min="3" range_max="5">leiser Zug</entry>
+<entry range_min="6" range_max="11">leichte Brise</entry>
+<entry range_min="12" range_max="19">schwache Brise</entry>
+<entry range_min="20" range_max="28">mäßige Brise</entry>
+<entry range_min="29" range_max="38">frische Brise</entry>
+<entry range_min="39" range_max="49">starker Wind</entry>
+<entry range_min="50" range_max="61">steifer Wind</entry>
+<entry range_min="62" range_max="74">stürmischer Wind</entry>
+<entry range_min="75" range_max="88">Sturm</entry>
+<entry range_min="89" range_max="102">schwerer Sturm</entry>
+<entry range_min="103" range_max="117">orkanartiker Sturm</entry>
+<entry range_min="117" range_max="1e99">Orkan</entry>
+</mapping>
+<mapping name="Bft">
+<entry range_min="0" range_max="0.299">0</entry>
+<entry range_min="0.3" range_max="1.599">1</entry>
+<entry range_min="1.6" range_max="3.399">2</entry>
+<entry range_min="3.4" range_max="5.499">3</entry>
+<entry range_min="5.5" range_max="7.999">4</entry>
+<entry range_min="8.0" range_max="10.799">5</entry>
+<entry range_min="10.8" range_max="13.899">6</entry>
+<entry range_min="13.9" range_max="17.199">7</entry>
+<entry range_min="17.2" range_max="20.799">8</entry>
+<entry range_min="20.8" range_max="24.499">9</entry>
+<entry range_min="24.5" range_max="28.499">10</entry>
+<entry range_min="28.5" range_max="32.699">11</entry>
+<entry range_min="32.7" range_max="1e99">12</entry>
+</mapping>
+<mapping name="WindText">
+<entry range_min="0" range_max="2">0 - Windstille</entry>
+<entry range_min="3" range_max="5">1 - leiser Zug</entry>
+<entry range_min="6" range_max="11">2 - leichte Brise</entry>
+<entry range_min="12" range_max="19">3 - schwache Brise</entry>
+<entry range_min="20" range_max="28">4 - mäßige Brise</entry>
+<entry range_min="29" range_max="38">5 - frische Brise</entry>
+<entry range_min="39" range_max="49">6 - starker Wind</entry>
+<entry range_min="50" range_max="61">7 - steifer Wind</entry>
+<entry range_min="62" range_max="74">8 - stürmischer Wind</entry>
+<entry range_min="75" range_max="88">9 - Sturm</entry>
+<entry range_min="89" range_max="102">10 - schwerer Sturm</entry>
+<entry range_min="103" range_max="117">11 - orkanartiker Sturm</entry>
+<entry range_min="117" range_max="1e99">12 - Orkan</entry>
+</mapping>
+<mapping name="WindTextMS">
+<entry range_min="0" range_max="0.299">0 (Windstill)</entry>
+<entry range_min="0.3" range_max="1.599">1 (leiser Zug)</entry>
+<entry range_min="1.6" range_max="3.399">2 (leichte Brise)</entry>
+<entry range_min="3.4" range_max="5.499">3 (schwache Brise)</entry>
+<entry range_min="5.5" range_max="7.999">4 (mäßige Brise)</entry>
+<entry range_min="8.0" range_max="10.799">5 (frische Brise)</entry>
+<entry range_min="10.8" range_max="13.899">6 (starker Wind)</entry>
+<entry range_min="13.9" range_max="17.199">7 (steifer Wind)</entry>
+<entry range_min="17.2" range_max="20.799">8 (stürmischer Wind)</entry>
+<entry range_min="20.8" range_max="24.499">9 (Sturm)</entry>
+<entry range_min="24.5" range_max="28.499">10 (schwerer Sturm)</entry>
+<entry range_min="28.5" range_max="32.699">11 (orkanartiger Sturm)</entry>
+<entry range_min="32.7" range_max="1e99">12 (Orkan)</entry>
+</mapping>
+<mapping name="Wind">
+<entry range_min="0" range_max="0.299">Windstille</entry>
+<entry range_min="0.3" range_max="1.599">leiser Zug</entry>
+<entry range_min="1.6" range_max="3.399">leichte Brise</entry>
+<entry range_min="3.4" range_max="5.499">schwache Brise</entry>
+<entry range_min="5.5" range_max="7.999">mäßige Brise</entry>
+<entry range_min="8.0" range_max="10.799">frische Brise</entry>
+<entry range_min="10.8" range_max="13.899">starker Wind</entry>
+<entry range_min="13.9" range_max="17.199">steifer Wind</entry>
+<entry range_min="17.2" range_max="20.799">stürmischer Wind</entry>
+<entry range_min="20.8" range_max="24.499">Sturm</entry>
+<entry range_min="24.5" range_max="28.499">schwerer Sturm</entry>
+<entry range_min="28.5" range_max="32.699">orkanartiger Sturm</entry>
+<entry range_min="32.7" range_max="1e99">Orkan</entry>
+</mapping>
+<mapping name="pkt_weiss_gruen">
+<entry value="0">
+<icon name="pkt_weiss"/>
+</entry>
+<entry value="1">
+<icon name="pkt_gruen"/>
+</entry>
+</mapping>
+</mappings>
+<stylings>
+<styling name="Red_Green">
+<entry value="0">red</entry>
+<entry value="1">green</entry>
+</styling>
+<styling name="Green_Red">
+<entry value="0">green</entry>
+<entry value="1">red</entry>
+</styling>
+<styling name="Blue_Green_Red">
+<entry range_min="-100" range_max="20">blue</entry>
+<entry range_min="20" range_max="22">green</entry>
+<entry range_min="22" range_max="100">red</entry>
+</styling>
+<styling name="LuftdruckTrendStyle">
+<entry range_min="1" range_max="10">green</entry>
+<entry range_min="0" range_max="0">white</entry>
+<entry range_min="-10" range_max="-1">red</entry>
+</styling>
+<styling name="NeutralRotBG">
+<entry value="0"/>
+<entry value="1">red_bg</entry>
+</styling>
+<styling name="GrünRot">
+<entry value="0">green</entry>
+<entry value="1">red</entry>
+</styling>
+<styling name="WindWarning">
+<entry range_min="0" range_max="28">green</entry>
+<entry range_min="28" range_max="74">yellow</entry>
+<entry range_min="74" range_max="1e99">red</entry>
+</styling>
+</stylings>
+<!--
+
+    <statusbar>
+      <status type="html"><![CDATA[
+          - <a href=".?forceReload=true">Reload</a>
+          - <a href="?config=demo">Widget Demo</a>
+        ]]></status>
+      <status type="html" hrefextend="config"><![CDATA[
+          - <a href="check_config.php">Check Config</a>
+        ]]></status>
+    </statusbar>
+-->
+</meta>
+<page name="Start">
+<timeout time="120" target="Start"/>
+<reload>
+<address transform="DPT:1.001" mode="readwrite">14/0/1</address>
+</reload>
+<navbar position="top" dynamic="true" scope="1">
+<pagejump target="Start" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="control_home"/>
+Start
+</label>
+</pagejump>
+<pagejump target="Licht" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="light_light"/>
+Licht
+</label>
+</pagejump>
+<pagejump target="Jalousien" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="fts_shutter"/>
+Jalousien
+</label>
+</pagejump>
+<pagejump target="Temperaturen" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+Temperaturen
+</label>
+</pagejump>
+<pagejump target="Heizung" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="sani_heating"/>
+Heizung
+</label>
+</pagejump>
+<pagejump target="Strom" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="measure_power_meter"/>
+Strom
+</label>
+</pagejump>
+<pagejump target="Fenster" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="fts_window_2w"/>
+Fenster
+</label>
+</pagejump>
+<pagejump target="Garten" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="control_building_outside"/>
+Garten
+</label>
+</pagejump>
+<pagejump target="Wetter" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="weather_cloudy"/>
+Wetter
+</label>
+</pagejump>
+<pagejump target="Einstellungen" align="center">
+<layout colspan="1"/>
+<label>
+<icon name="edit_settings"/>
+Einstellungen
+</label>
+</pagejump>
+<!--
+ <strftime lang="de" format='%A, %d. %B %Y &#160; %H:%M' class="timenavbar"><layout colspan="0"/></strftime> 
+-->
+</navbar>
+<!--  Hauptseite  -->
+<group name="Aktuelle Zeit" class="timeclass">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<strftime lang="de" format="%H:%M" class="timebig">
+<layout colspan="6"/>
+</strftime>
+<break/>
+<strftime lang="de" format="%A, %d. %B %Y" class="timedate">
+<layout colspan="6"/>
+</strftime>
+<break/>
+</group>
+</group>
+<group name="Kalendar" class="kalendar">
+<layout colspan="8"/>
+<web src="/events/" height="160px" frameborder="false" scrolling="no">
+<layout colspan="8"/>
+</web>
+</group>
+<break/>
+<group name="Wetter Aktuell" class="tempclass">
+<layout colspan="6"/>
+<group nowidget="true">
+<layout colspan="6"/>
+<info format="%.1f °C" class="bigtemp" align="center">
+<layout colspan="2.50"/>
+<address transform="DPT:9" mode="readwrite">5/1/1</address>
+<!-- <info format="%.1f °C" align="center">  -->
+</info>
+<info mapping="TemperaturTrend" class="verysmall" align="center" styling="LuftdruckTrendStyle">
+<layout colspan="1"/>
+<label/>
+<address transform="DPT:9" mode="readwrite">5/1/22</address>
+</info>
+<info format="%.0f %" class="bigtemp" align="center">
+<layout colspan="2.50"/>
+<address transform="DPT:5.001" mode="readwrite">5/1/2</address>
+</info>
+<break/>
+<info format="%.1f °C" align="center">
+<layout colspan="3.0"/>
+<label>
+<icon name="temp_temperature_min"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/20</address>
+</info>
+<info format="%.1f °C" align="center">
+<layout colspan="3.0"/>
+<label>
+<icon name="temp_temperature_max"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/21</address>
+</info>
+<text align="center">
+<layout colspan="2"/>
+<label>Luftdruck</label>
+</text>
+<info format="%.1f hPa" align="center">
+<layout colspan="2"/>
+<label/>
+<address transform="DPT:9" mode="readwrite">5/1/25</address>
+</info>
+<info mapping="LuftdruckTrend" styling="LuftdruckTrendStyle" align="center">
+<layout colspan="2"/>
+<label/>
+<address transform="DPT:9" mode="readwrite">5/1/26</address>
+</info>
+</group>
+</group>
+<group name="Status Übersicht">
+<layout colspan="6"/>
+<group nowidget="true" align="center" pagejumptarget="Licht">
+<layout colspan="1.0"/>
+<info mapping="StatusLichtGesamt" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/0</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="Licht">
+<layout colspan="1.0"/>
+<info mapping="StatusLichtBewegungAussen" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/5</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="Fenster">
+<layout colspan="1.0"/>
+<info mapping="StatusFensterGesamt" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/7/10</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="Fenster">
+<layout colspan="1.0"/>
+<info mapping="StatusHaustuerGesamt" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/1/9</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="bla">
+<layout colspan="1.0"/>
+<info mapping="StatusAnwesend" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/5/155</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="Garten">
+<layout colspan="1.0"/>
+<info mapping="StatusBewaesserung" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/60</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="bla">
+<layout colspan="1.0"/>
+<info mapping="StatusAnrufliste" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/61</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="bla">
+<layout colspan="1.0"/>
+<info mapping="StatusGarbage" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/62</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="bla">
+<layout colspan="1.0"/>
+<info mapping="StatusPost" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/63</address>
+</info>
+</group>
+<group nowidget="true" align="center">
+<layout colspan="1.0"/>
+<info mapping="StatusWetterRegen" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">7/5/103</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="WetterUnwetterwarnung">
+<layout colspan="1.0"/>
+<info mapping="StatusWetterWarnungStufen" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:5.xxx" mode="readwrite">5/2/65</address>
+</info>
+</group>
+<group nowidget="true" align="center" pagejumptarget="bla">
+<layout colspan="1.0"/>
+<info mapping="StatusAttention" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">7/5/30</address>
+</info>
+</group>
+</group>
+<break/>
+<group name="Anrufliste" class="anrufliste">
+<layout colspan="4"/>
+<web src="/calllog/loadcalllog.php" height="120px" frameborder="false" scrolling="no" refresh="60">
+<layout colspan="4"/>
+</web>
+</group>
+<break/>
+<!--
+
+<line />
+
+      <group name="blabla" class="blabla">
+        <layout colspan="12" />
+          <web src="http://fs77f.net/events/test.html" width="960px" height="80px" frameborder="false" scrolling="no"/>
+      </group>
+
+      <group name="blub" class="blub">
+        <layout colspan="12" />
+          <web src="http://fs77f.net/test.html" height="80px" frameborder="false" scrolling="no">
+		<layout colspan="12" />
+	  </web>
+      </group>
+-->
+<group name="Licht Status" pagejumptarget="Licht">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="LichtEG" styling="Green_Red">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/1</address>
+</info>
+<info mapping="LichtOG" styling="Green_Red">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/2</address>
+</info>
+<info mapping="LichtDG" styling="Green_Red">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/3</address>
+</info>
+<info mapping="LichtKG" styling="Green_Red">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/4</address>
+</info>
+<info mapping="LichtAußen" styling="Green_Red">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/5</address>
+</info>
+</group>
+</group>
+<group name="Jalousien" pagejumptarget="Jalousien">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="JalousienEG" styling="Green_Red" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/1</address>
+</info>
+<info mapping="JalousienOG" styling="Green_Red" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/2</address>
+</info>
+<info mapping="JalousienDG" styling="Green_Red" align="center">
+<layout colspan="1.0"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/3</address>
+</info>
+</group>
+</group>
+<break/>
+<group name="oscar">
+<layout colspan="8"/>
+<group nowidget="true">
+<layout colspan="8"/>
+<text>
+<layout colspan="2.0"/>
+<label>Wohnzimmer/Küche</label>
+</text>
+<trigger value="0" mapping="AllOffIcon" align="center">
+<layout colspan="0.6"/>
+<address transform="DPT:1.008" mode="readwrite">5/2/255</address>
+</trigger>
+<trigger value="1" mapping="AufAbSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="0.8"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" styling="Red_Green" align="center">
+<layout colspan="0.8"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<info mapping="UpDownRollo" styling="NeutralRotBG" align="center">
+<layout colspan="0.8"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+<info mapping="AufZuFensterSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/3/12</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="4"/>
+<text>
+<layout colspan="1.5"/>
+<label>Schlafzimmer</label>
+</text>
+<trigger value="0" mapping="AllOffIcon" align="center">
+<layout colspan="0.5"/>
+<address transform="DPT:1.008" mode="readwrite">5/2/255</address>
+</trigger>
+<trigger value="1" mapping="AufAbSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="0.5"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" styling="Red_Green" align="center">
+<layout colspan="0.5"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<info mapping="UpDownRollo" styling="NeutralRotBG" align="center">
+<layout colspan="0.5"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+</group>
+</group>
+<line/>
+<group name="Licht Status">
+<layout colspan="6"/>
+<trigger value="0" mapping="AllOff" align="center">
+<layout colspan="2"/>
+<address transform="DPT:1.008" mode="readwrite">5/2/255</address>
+</trigger>
+<trigger value="1" mapping="AllOff" align="center">
+<layout colspan="2"/>
+<address transform="DPT:1.008" mode="readwrite">5/2/255</address>
+</trigger>
+<switch on_value="1" off_value="0" mapping="AllOff">
+<label>Anwesend Abwesend Switch</label>
+<address transform="DPT:1.001" mode="readwrite">5/2/255</address>
+</switch>
+</group>
+<line/>
+<line/>
+<text>
+<label>
+<icon name="control_building_modern_s_eg" type="64" styling="height:auto"/>
+Icon mit type="64" und styling
+</label>
+</text>
+<page name="Fenster" visible="false">
+<group name="Fenster & Tür Status" pagejumptarget="Fenster">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="Eingangstuer" styling="Green_Red">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/1/9</address>
+</info>
+<info mapping="FensterEG" styling="Green_Red">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/1/10</address>
+</info>
+<info mapping="FensterOG" styling="Green_Red">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/2/10</address>
+</info>
+<info mapping="FensterDG" styling="Green_Red">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/3/10</address>
+</info>
+<info mapping="FensterKG" styling="Green_Red">
+<layout colspan="0.6"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/0/10</address>
+</info>
+</group>
+</group>
+<break/>
+<group name="Erdgeschoss">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="12"/>
+<info mapping="AufZuFensterSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="2"/>
+<label>Wohnzimmer</label>
+<address transform="DPT:5.xxx" mode="readwrite">7/1/11</address>
+</info>
+</group>
+</group>
+</page>
+<!-- 
+	HEIZUNG
+ -->
+<page name="Heizung" visible="false">
+<group name="Heizung">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<text>
+<layout colspan="1.4"/>
+<label>Heizung</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/70</address>
+</info>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/71</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="4"/>
+<text>
+<layout colspan="1.4"/>
+<label>Solar</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="sani_solar_temp"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/72</address>
+</info>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="sani_solar_temp"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/73</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="4"/>
+<text>
+<layout colspan="1.4"/>
+<label>Wasserspeicher</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="sani_buffer_temp_up"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/74</address>
+</info>
+<info format="%.1f °C">
+<layout colspan="1.3"/>
+<label>
+<icon name="sani_buffer_temp_down"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/75</address>
+</info>
+</group>
+</group>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" legendposition="nw" popup="true" tooltip="false">
+<label>Temperatur Heizung</label>
+<axis position="left" min="20" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Heizung Vorlauf">TempHeizungVorlauf</rrd>
+<rrd color="#0000FF" label="Heizung Rücklauf">TempHeizungRuecklauf</rrd>
+</diagram>
+<break/>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<label>Temperatur Solar</label>
+<axis position="left" min="20" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Vorlauf">TempSolarVorlauf</rrd>
+<rrd color="#0000FF" label="Ruecklauf">TempSolarRuecklauf</rrd>
+</diagram>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<label>Temperatur Wasserspeicher</label>
+<axis position="left" min="18" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Wasserspeicher Oben">TempWarmwasserOben</rrd>
+<rrd color="#ff9600" label="Wasserspeicher Unten">TempWarmwasserUnten</rrd>
+</diagram>
+<break/>
+<diagram width="250" height="100" series="day" period="4" refresh="300" previewlabels="true" legendposition="nw" popup="true" tooltip="false">
+<layout colspan="4"/>
+<label>Heizung (7 Tage)</label>
+<axis position="left" min="20" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Heizung Vorlauf">TempHeizungVorlauf</rrd>
+<rrd color="#0000FF" label="Heizung Rücklauf">TempHeizungRuecklauf</rrd>
+</diagram>
+<diagram width="250" height="100" series="day" period="4" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<layout colspan="4"/>
+<label>Solar (7 Tage)</label>
+<axis position="left" min="20" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Vorlauf">TempSolarVorlauf</rrd>
+<rrd color="#0000FF" label="Ruecklauf">TempSolarRuecklauf</rrd>
+</diagram>
+<diagram width="250" height="100" series="day" period="4" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<layout colspan="4"/>
+<label>Wasserspeicher (7 Tage)</label>
+<axis position="left" min="18" max="75" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Wasserspeicher Oben">TempWarmwasserOben</rrd>
+<rrd color="#ff9600" label="Wasserspeicher Unten">TempWarmwasserUnten</rrd>
+</diagram>
+</page>
+<page name="Wetter" visible="false">
+<group name="Wettervorhersage">
+<layout colspan="12"/>
+<web src="/wetter/" height="290px" scrolling="no" frameborder="false" refresh="600">
+<layout colspan="12"/>
+</web>
+</group>
+<image src="http://www.yr.no/place/Germany/Berlin/Berlin/avansert_meteogram.png" refresh="360">
+<layout colspan="12"/>
+</image>
+<break/>
+<group name="Aktuelle Wetterlage">
+<layout colspan="6"/>
+<image src="http://www.dwd.de/wundk/wetter/de/Nordost.jpg" refresh="360">
+<layout colspan="6"/>
+</image>
+</group>
+<group name="Niederschlags Radar">
+<layout colspan="6"/>
+<image src="http://www.dwd.de/wundk/radar/Radarfilm_WEB_DL.gif" refresh="360">
+<layout colspan="6"/>
+</image>
+</group>
+<break/>
+<group name="Unwetter Vorhersage">
+<layout colspan="6"/>
+<image src="http://www.unwetterzentrale.de/images/map/deutschland_index.png" refresh="360">
+<layout colspan="6"/>
+</image>
+</group>
+<group name="Niederschlags Radar">
+<layout colspan="6"/>
+<image src="http://www.unwetterzentrale.de/images/map/brandenburg_index.png" refresh="360">
+<layout colspan="6"/>
+</image>
+</group>
+</page>
+<page name="WetterUnwetterwarnung" visible="false">
+<web src="http://fs77f.net/wetter/unwetter.php" width="800px" height="600px" frameborder="false" refresh="600"/>
+</page>
+<page name="Garten" visible="false">
+<group name="Außensteckdosen">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="6"/>
+<text>
+<layout colspan="3"/>
+<label>Gesamt</label>
+</text>
+<trigger value="0" mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</trigger>
+<trigger value="1" mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="2"/>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</trigger>
+</group>
+<break/>
+<group nowidget="true">
+<layout colspan="6"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<label>Terrasse Unten</label>
+<address transform="DPT:1.001" mode="readwrite">4/1/51</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+<group nowidget="true">
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Dachterrasse</label>
+<address transform="DPT:1.001" mode="readwrite">4/3/41</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+<group nowidget="true">
+<layout colspan="6"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<label>Steckdose Fahrradbox</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/21</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+<group nowidget="true">
+<layout colspan="6"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<label>Steckdosesäule Vorne</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/22</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+<group nowidget="true">
+<layout colspan="6"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<label>Steckdosesäule Hinten</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/31</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+<group nowidget="true">
+<layout colspan="6"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<label>Steckdose Gartenhaus Außen</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/30</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/10</address>
+</toggle>
+</group>
+</group>
+<group name="Gartenbewässerung">
+<layout colspan="12"/>
+<switch on_value="1" off_value="0" mapping="Automatic_Manual">
+<label>Automatische Gartenbewässerung</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/95</address>
+</switch>
+<trigger value="0" mapping="On_Off" styling="Green_Red">
+<label>Wasser Gesamt Aus</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</trigger>
+<line/>
+<trigger value="0">
+<label>Gartenwasser Gesamt Aus</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/90</address>
+</trigger>
+<info mapping="On_Off">
+<label>Gartenwasser Status</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/91</address>
+</info>
+<line/>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Vorne Parkplatz (Strang 1)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/81</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Seite (Strang 4)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/84</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Garten Unten Rasen (Strang 2)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/82</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Garten Oben Rasen (Strang 5)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/85</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Garten Neben Hütte (Strang 6)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/86</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<toggle mapping="On_Off" styling="Green_Red">
+<label>Wasser Beete (Strang 3)</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/83</address>
+<address transform="DPT:1.001" mode="readwrite">4/5/80</address>
+</toggle>
+<break/>
+</group>
+</page>
+<page name="Telefon" ga="6/6/111">
+<line/>
+<text>
+<label>
+<icon name="phone_ring" color="green" styling="height:auto"/>
+Icon mit type="64" und styling
+</label>
+</text>
+<break/>
+<web src="/calllog/getcall.php" width="960px" height="300px" frameborder="false" scrolling="no" ga="6/6/111"/>
+</page>
+<page name="Temperaturen" visible="false">
+<group name="Temperaturen">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Wohnzimmer</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/3</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/4</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Bad OG</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/5</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/6</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Office DG</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/7</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/8</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Schlafzimmer</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/9</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/10</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Kinderzimmer</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/11</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/12</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text>
+<layout colspan="1"/>
+<label>Keller</label>
+</text>
+<info format="%.1f °C">
+<layout colspan="1"/>
+<label>
+<icon name="temp_temperature"/>
+</label>
+<address transform="DPT:9" mode="readwrite">5/1/13</address>
+</info>
+<info format="%.0f %">
+<layout colspan="1"/>
+<label>
+<icon name="weather_humidity"/>
+</label>
+<address transform="DPT:5.001" mode="readwrite">5/1/14</address>
+</info>
+</group>
+</group>
+<group name="Temperaturen Außen">
+<layout colspan="12"/>
+<diagram series="day" period="1" refresh="300" width="400" height="200" previewlabels="true" popup="true" legend="none">
+<layout colspan="6"/>
+<label>Temperatur Aussen (24h)</label>
+<axis position="left" label="°C">temp</axis>
+<rrd color="#ff8000" label="Außen" datasource="AVERAGE">TemperaturAussen</rrd>
+</diagram>
+<diagram series="day" period="7" refresh="300" width="400" height="200" previewlabels="true" popup="true" legend="none">
+<layout colspan="6"/>
+<label>Temperatur Aussen (7 Tage)</label>
+<axis position="left" label="°C">temp</axis>
+<rrd color="#ff8000" label="Außen" datasource="AVERAGE">TemperaturAussen</rrd>
+</diagram>
+</group>
+<group name="Temperaturen Innen">
+<layout colspan="12"/>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<label>Temperaturen Innen (24h)</label>
+<axis position="left" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Wohnzimmer">TempWZ</rrd>
+<rrd color="#0000FF" label="Bad OG">TempBadOG</rrd>
+<rrd color="#00FF00" label="Office">TempOffice</rrd>
+<rrd color="#FFFF00" label="Schlafzimmer">TempSchlafen</rrd>
+<rrd color="#00FFFF" label="Kinderzimmer">TempKiZi</rrd>
+<rrd color="#FF00FF" label="Keller">TempKeller</rrd>
+</diagram>
+<diagram width="400" height="200" series="day" period="7" refresh="300" previewlabels="true" legendposition="nw" popup="true">
+<label>Temperaturen Innen (7 Tage)</label>
+<axis position="left" label="°C">temp</axis>
+<axis unit="°C"/>
+<rrd color="#FF0000" label="Wohnzimmer">TempWZ</rrd>
+<rrd color="#0000FF" label="Bad OG">TempBadOG</rrd>
+<rrd color="#00FF00" label="Office">TempOffice</rrd>
+<rrd color="#FFFF00" label="Schlafzimmer">TempSchlafen</rrd>
+<rrd color="#00FFFF" label="Kinderzimmer">TempKiZi</rrd>
+<rrd color="#FF00FF" label="Keller">TempKeller</rrd>
+</diagram>
+</group>
+</page>
+<page name="Grafiken">
+<diagram width="600" height="300" series="week" period="1" refresh="300">
+<label>Temperatur</label>
+<axis unit="°C"/>
+<rrd color="#ff9600" datasource="AVERAGE">TemperaturAussen</rrd>
+</diagram>
+<diagram width="600" height="300" series="day" period="2" refresh="300">
+<label>Wind</label>
+<axis unit="&nbsp;m/s"/>
+<rrd color="#ff9600" datasource="MAX">Wind</rrd>
+</diagram>
+<diagram width="600" height="300" series="hour" period="24" refresh="300">
+<label>Helligkeit</label>
+<axis unit="&nbsp;lux"/>
+<rrd color="#ff9600" datasource="AVERAGE">Helligkeit</rrd>
+</diagram>
+<break/>
+<diagram width="600" height="300" series="day" period="1" refresh="300">
+<label>Temperatur</label>
+<axis unit="°C"/>
+<rrd color="#ff9600" datasource="MAX">TempOUTKS555</rrd>
+</diagram>
+<diagram width="600" height="300" series="day" period="1" refresh="300">
+<label>Luftdruck</label>
+<axis unit="&nbsp;hPa"/>
+<rrd color="#ff9600" datasource="MAX">Luftdruck</rrd>
+</diagram>
+<diagram width="600" height="300" series="day" period="1" refresh="300">
+<label>Wind</label>
+<axis unit="&nbsp;km/h"/>
+<rrd color="#ff9600">WindOUTKS555</rrd>
+</diagram>
+<diagram width="600" height="300" series="day" period="1" refresh="300">
+<label>Wind Average</label>
+<axis unit="&nbsp;km/h"/>
+<rrd color="#ff9600" datasource="AVERAGE">WindOUTKS555</rrd>
+</diagram>
+</page>
+<page name="Licht" visible="false">
+<group name="Erdgeschoss">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Wohnzimmer</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/40</address>
+</toggle>
+<slide min="0" max="255">
+<layout colspan="6"/>
+<address transform="DPT:5.004" mode="readwrite">1/1/42</address>
+</slide>
+</group>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Wohnzimmer Schrank</label>
+<address transform="DPT:1.001" mode="readwrite">4/1/40</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Wohnzimmer Sideboard</label>
+<address transform="DPT:1.001" mode="readwrite">4/1/41</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Wohnzimmer Couch</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/48</address>
+</toggle>
+<group nowidget="true">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Wohnzimmer Esstisch</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/43</address>
+</toggle>
+<slide min="0" max="255">
+<layout colspan="6"/>
+<address transform="DPT:5.004" mode="readwrite">1/1/45</address>
+</slide>
+</group>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Küche</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/30</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Küche Arbeitsplatte</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/31</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Flur</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/10</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Gäste Bad</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/22</address>
+</toggle>
+</group>
+<group name="Obergeschoss">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Schlafzimmer</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/40</address>
+</toggle>
+<slide min="0" max="255">
+<layout colspan="6"/>
+<address transform="DPT:5.004" mode="readwrite">1/2/42</address>
+</slide>
+</group>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Nachttisch Carsten</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/45</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Nachttisch Frauke</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/46</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Kleiderschrank</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/43</address>
+</toggle>
+<group nowidget="true">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Kinderzimmer</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/30</address>
+</toggle>
+<slide min="0" max="255">
+<layout colspan="6"/>
+<address transform="DPT:5.004" mode="readwrite">1/2/32</address>
+</slide>
+</group>
+<group nowidget="true">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Bad</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/20</address>
+</toggle>
+<slide min="0" max="255">
+<layout colspan="6"/>
+<address transform="DPT:5.004" mode="readwrite">1/2/22</address>
+</slide>
+</group>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Flur / Treppe EG</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/10</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Abstellkammer</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/50</address>
+</toggle>
+</group>
+<group name="Dachgeschoss">
+<layout colspan="12"/>
+<switch mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Studio</label>
+<address transform="DPT:1.001" mode="readwrite">1/3/30</address>
+</switch>
+<switch mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Bad DG</label>
+<address transform="DPT:1.001" mode="readwrite">1/3/11</address>
+</switch>
+<switch mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Treppe</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/12</address>
+</switch>
+<switch mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Kammer</label>
+<address transform="DPT:1.001" mode="readwrite">1/3/20</address>
+</switch>
+</group>
+<group name="Keller">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Treppe</label>
+<address transform="DPT:1.001" mode="readwrite">1/0/10</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Anschlusskeller</label>
+<address transform="DPT:1.001" mode="readwrite">1/0/20</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Keller Vorne</label>
+<address transform="DPT:1.001" mode="readwrite">1/0/30</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Keller Hinten</label>
+<address transform="DPT:1.001" mode="readwrite">1/0/31</address>
+</toggle>
+</group>
+<line/>
+<group name="Außenbereich">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Terrasse EG</label>
+<address transform="DPT:1.001" mode="readwrite">1/1/50</address>
+</toggle>
+<break/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Terrasse DG</label>
+<address transform="DPT:1.001" mode="readwrite">1/3/40</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Ambientlight Terrasse</label>
+<address transform="DPT:1.001" mode="readwrite">1/5/10</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Gartenhaus</label>
+<address transform="DPT:1.001" mode="readwrite">1/5/61</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Garten Ambientlicht Hinten</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/32</address>
+</toggle>
+<break/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Garten Hinten</label>
+<address transform="DPT:1.001" mode="readwrite">1/5/20</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Garten Seite</label>
+<address transform="DPT:1.001" mode="readwrite">1/5/21</address>
+</toggle>
+</group>
+</page>
+<page name="Strom" visible="false">
+<info format="%.0f kWh">
+<label>Zählerstand</label>
+<address transform="DPT:9.021" mode="readwrite">6/6/66</address>
+</info>
+<info format="%.0f W">
+<label>Verbrauch Aktuell Gesamt</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/69</address>
+</info>
+<info format="%.0f kWh">
+<label>Zähler Server</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/67</address>
+</info>
+<info format="%.0f W">
+<label>Verbrauch Aktuell Server</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/78</address>
+</info>
+<info format="%.0f kWh">
+<label>Zähler Studio</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/68</address>
+</info>
+<info format="%.0f W">
+<label>Verbrauch Aktuell Studio</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/79</address>
+</info>
+<line/>
+<info format="%.1f kWh">
+<label>Verbrauch Heute</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/70</address>
+</info>
+<info format="%3.2f Euro">
+<label>Kosten</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/73</address>
+</info>
+<info format="%.1f kWh">
+<label>Verbrauch Gestern</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/71</address>
+</info>
+<info format="%.2f Euro">
+<label>Kosten</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/74</address>
+</info>
+<info format="%.1f kWh">
+<label>Verbrauch Monat</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/72</address>
+</info>
+<info format="%.2f Euro">
+<label>Kosten</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/75</address>
+</info>
+<info format="%.1f kWh">
+<label>Verbrauch Vormonat</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/76</address>
+</info>
+<info format="%.2f Euro">
+<label>Kosten</label>
+<address transform="DPT:9.024" mode="readwrite">6/6/77</address>
+</info>
+<line/>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" popup="true">
+<layout colspan="12"/>
+<label>Verbrauch</label>
+<axis unit="&nbsp;W"/>
+<rrd datasource="AVERAGE">StromVerbrauch</rrd>
+</diagram>
+<break/>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" legendposition="nw" popup="true" tooltip="false">
+<label>Stromverbrauch</label>
+<axis unit="W"/>
+<rrd color="#FF0000" label="Verbrauch Studio">StromVerbrauchStudio</rrd>
+<rrd color="#0000FF" label="Verbrauch Server">StromVerbrauchServer</rrd>
+</diagram>
+<break/>
+<diagram width="400" height="200" series="day" period="1" refresh="300" previewlabels="true" popup="true">
+<label>Stromverbrauch Gesamt (24h)</label>
+<axis unit="W"/>
+<rrd color="#00FFFF" label="Gesamt" datasource="AVERAGE">StromVerbrauch</rrd>
+<rrd color="#FF0000" label="Studio" datasource="AVERAGE">StromVerbrauchStudio</rrd>
+<rrd color="#0000FF" label="Server" datasource="AVERAGE">StromVerbrauchServer</rrd>
+</diagram>
+<diagram width="400" height="200" series="day" period="7" refresh="300" previewlabels="true" popup="true">
+<label>Stromverbrauch Gesamt (7d)</label>
+<axis unit="W"/>
+<rrd color="#00FFFF" label="Gesamt" datasource="AVERAGE">StromVerbrauch</rrd>
+<rrd color="#FF0000" label="Studio" datasource="AVERAGE">StromVerbrauchStudio</rrd>
+<rrd color="#0000FF" label="Server" datasource="AVERAGE">StromVerbrauchServer</rrd>
+</diagram>
+<break/>
+</page>
+<page name="Jalousien" visible="false">
+<group name="Flur" align="center">
+<layout colspan="6"/>
+<group nowidget="true">
+<layout colspan="6"/>
+<info mapping="UpDownRollo" styling="NeutralRotBG" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+<text align="left">
+<layout colspan="1"/>
+<label>Rolladen</label>
+</text>
+<trigger value="1" mapping="AufAbSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="1.33"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="1" mapping="HaltSymbol" styling="Red_Green" align="center">
+<layout colspan="1.33"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/33</address>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" styling="Red_Green" align="center">
+<layout colspan="1.33"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+</group>
+</group>
+<break/>
+<text align="left">
+<layout colspan="1"/>
+<label>Fenster Auf / Zu</label>
+</text>
+<info mapping="AufZuFensterSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.xxx" mode="readwrite">7/3/12</address>
+</info>
+<break/>
+<text align="left">
+<layout colspan="1"/>
+<label>Rolo Up/Down</label>
+</text>
+<info mapping="UpDownRollo" styling="NeutralRotBG" align="center">
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+<break/>
+<group nowidget="true" flavour="sodium">
+<layout colspan="12"/>
+<text>
+<layout colspan="2"/>
+<label>WZ Seite</label>
+</text>
+<info mapping="Jalousie">
+<layout colspan="2"/>
+<address transform="DPT:5.001" mode="readwrite">5/2/22</address>
+</info>
+<info format="%.0f %">
+<layout colspan="2"/>
+<address transform="DPT:5.001" mode="readwrite">5/2/22</address>
+</info>
+<trigger value="0" styling="GreyGrey" mapping="UpDown">
+<layout colspan="2"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/20</address>
+</trigger>
+<trigger value="1" styling="GreyGrey" mapping="Stop">
+<layout colspan="2"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/21</address>
+</trigger>
+<trigger value="1" styling="GreyGrey" mapping="UpDown">
+<layout colspan="2"/>
+<address transform="DPT:1.001" mode="readwrite">5/2/20</address>
+</trigger>
+</group>
+<line/>
+<group name="Dachgeschoss" align="left">
+<layout colspan="6"/>
+<group nowidget="true">
+<text align="left">
+<layout colspan="2" rowspan="1"/>
+<label>Studio Straßenseite</label>
+</text>
+<info mapping="UpDownRollo" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+<trigger value="1" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="1" mapping="HaltSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/3/33</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+</group>
+</group>
+<group name="Autmatik Obergeschoss">
+<layout colspan="6"/>
+<group nowidget="true">
+<layout colspan="3"/>
+<text align="left">
+<layout colspan="2"/>
+<label>Automatik</label>
+</text>
+<switch mapping="AnAusSymbol" styling="RotNeutralBG" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.003" mode="readwrite">0/0/0</address>
+</switch>
+</group>
+<group nowidget="true">
+<layout colspan="3"/>
+<text align="left">
+<layout colspan="2"/>
+<label>Sonnenschutz</label>
+</text>
+<switch mapping="AnAusSymbol" styling="RotNeutralBG" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.003" mode="readwrite">0/0/0</address>
+</switch>
+</group>
+</group>
+<group name="Heizung">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="KonnexHVACSymbol" styling="KonnexHVAC">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</info>
+<trigger value="1" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+<trigger value="2" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+<trigger value="3" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<text align="left">
+<layout colspan="1"/>
+<label>
+<icon name="scene_sleeping"/>
+</label>
+</text>
+<switch on_value="1" off_value="0" mapping="AnAusSymbol" styling="NeutralGrünBG" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">0/0/0</address>
+</switch>
+</group>
+</group>
+<group name="Erdgeschoss">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="6"/>
+<text>
+<label>bla</label>
+<!--  <layout colspan="1.5" />  -->
+<!-- DG Strasse  -->
+</text>
+<trigger value="1" mapping="Auf_Ab" styling="Green_Red">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<trigger value="1" mapping="Stop">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/33</address>
+</trigger>
+<trigger value="0" mapping="Auf_Ab" styling="Green_Red">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/3/32</address>
+</trigger>
+<info mapping="On_Off" styling="Green_Red">
+<label>Status</label>
+<address transform="DPT:1.001" mode="readwrite">2/3/32</address>
+</info>
+</group>
+</group>
+</page>
+<page name="Einstellungen" visible="false">
+<group name="Sonstiges">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Nachtlicht Flur OG</label>
+<address transform="DPT:1.001" mode="readwrite">1/2/15</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Beamer</label>
+<address transform="DPT:1.001" mode="readwrite">4/1/45</address>
+</toggle>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Zirkulationspumpe</label>
+<address transform="DPT:1.001" mode="readwrite">4/0/10</address>
+</toggle>
+</group>
+<group name="Sonstiges">
+<layout colspan="12"/>
+<toggle mapping="AnAusSymbol" styling="Green_Red">
+<layout colspan="6"/>
+<label>Pumpe Dränage</label>
+<address transform="DPT:1.001" mode="readwrite">4/5/35</address>
+</toggle>
+<info mapping="DraenageVoll" styling="WindWarning">
+<label>Dränage</label>
+<address transform="DPT:1.001" mode="readwrite">7/5/30</address>
+</info>
+</group>
+<text type="html">
+<label>
+<![CDATA[
+- <a href=".?forceReload=true">Reload</a> - <a href="?config=demo">Widget Demo</a> - <a href="check_config.php">Check Config</a> - <a href=".?forceReload=true"><div class="value"><img class="icon" src="icon/knx-uf-iconset/128x128_white/control_return.png"></div></a> - <a href=".?forceReload=true">Reload <div class="actor center switchUnpressed"><div class="value"><img class="icon" src="icon/knx-uf-iconset/128x128_white/control_return.png"></div></div></a> - <a href=".?forceReload=true"><div class="actor switchUnpressed green"><div class="value"><img class="icon" src="icon/knx-uf-iconset/128x128_white/control_return.png"></div></div></a>
+]]>
+</label>
+</text>
+</page>
+<line/>
+<group name="Regen">
+<layout colspan="12"/>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm/h">
+<layout colspan="2"/>
+<label>Regen Intensität</label>
+<address transform="DPT:9" mode="readwrite">5/1/30</address>
+</info>
+</group>
+<break/>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen Last Hour</label>
+<address transform="DPT:9" mode="readwrite">5/1/31</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen Last 24h</label>
+<address transform="DPT:9" mode="readwrite">5/1/32</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen Today</label>
+<address transform="DPT:9" mode="readwrite">5/1/33</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen Yesterday</label>
+<address transform="DPT:9" mode="readwrite">5/1/34</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen this Month</label>
+<address transform="DPT:9" mode="readwrite">5/1/35</address>
+</info>
+</group>
+<group nowidget="true">
+<layout colspan="2"/>
+<info format="%.2f mm">
+<layout colspan="2"/>
+<label>Regen last Month</label>
+<address transform="DPT:9" mode="readwrite">5/1/36</address>
+</info>
+</group>
+</group>
+<line/>
+<line/>
+<!--
+
+    <upnpcontroller label="Wohnzimmer" player_ip_addr="192.168.42.23" player_port="50001" refresh="5" debug="true"/>
+-->
+<line/>
+<!--
+
+
+    <line/>
+    <infotrigger uplabel="AUF" upvalue="0" downlabel="AB" downvalue="1" align="center" infoposition="1" change="relative">
+      <label>Esszimmer</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="button">2/2/30</address>
+      <address transform="DPT:5.001" readonly="true" variant="display">2/2/33</address>
+    </infotrigger>
+    <trigger value="1" mapping="STOP">
+      <label>Essz.</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">2/2/31</address>
+    </trigger>
+-->
+<line/>
+<switch on_value="1" off_value="0" mapping="On_Off" styling="Blue_Green_Red">
+<label>Licht Bewegung Freigabe</label>
+<address transform="DPT:1.001" mode="readwrite">7/5/20</address>
+</switch>
+<toggle mapping="On_Off" styling="Red_Green">
+<label>Freigabe Toggle</label>
+<address transform="DPT:1.001" mode="readwrite">7/5/20</address>
+</toggle>
+<info mapping="Freigegeben_Nichtfreigegeben" styling="Green_Red">
+<label>Freigabe Info</label>
+<address transform="DPT:1.001" mode="readwrite">7/5/20</address>
+</info>
+<line/>
+<info mapping="Anwesend_Abwesend" styling="Green_Red">
+<label>Sind Abwesend</label>
+<address transform="DPT:1.001" mode="readwrite">5/5/155</address>
+</info>
+<trigger value="0" mapping="Anwesend_Abwesend">
+<label>Anwesend</label>
+<address transform="DPT:1.001" mode="readwrite">5/5/155</address>
+</trigger>
+<trigger value="1" mapping="Anwesend_Abwesend">
+<label>Abwesend</label>
+<address transform="DPT:1.001" mode="readwrite">5/5/155</address>
+</trigger>
+<break/>
+<switch on_value="1" off_value="0" mapping="Anwesend_Abwesend">
+<label>Anwesend Abwesend Switch</label>
+<address transform="DPT:1.001" mode="readwrite">5/5/155</address>
+</switch>
+<break/>
+<switch on_value="1" off_value="0" mapping="Automatic_Manual">
+<label>Jalousieautomatik Schlafzimmer</label>
+<address transform="DPT:1.001" mode="readwrite">7/2/45</address>
+</switch>
+<break/>
+<group name="Heizung">
+<layout colspan="4"/>
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="KonnexHVACSymbol" styling="KonnexHVAC">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</info>
+<trigger value="1" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+<trigger value="2" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+<trigger value="3" mapping="KonnexHVACSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:5.010" mode="readwrite">0/0/0</address>
+</trigger>
+</group>
+</group>
+<group name="Heizung">
+<group nowidget="true">
+<layout colspan="4"/>
+<info mapping="AufZuTuerSymbol" styling="NeutralRotBG" align="center">
+<layout colspan="1" rowspan="2"/>
+<address transform="DPT:1.001" mode="readwrite">2/1/44</address>
+</info>
+<trigger value="1" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/1/44</address>
+</trigger>
+<trigger value="1" mapping="HaltSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/1/44</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/1/44</address>
+</trigger>
+</group>
+</group>
+<group name="Heizung">
+<info mapping="GesamtAufZu" styling="GrünRot" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/1/44</address>
+</info>
+<group nowidget="true">
+<layout colspan="3"/>
+<trigger value="1" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/1/44</address>
+</trigger>
+<trigger value="1" mapping="HaltSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.001" mode="readwrite">2/1/44</address>
+</trigger>
+<trigger value="0" mapping="AufAbSymbol" align="center">
+<layout colspan="1"/>
+<address transform="DPT:1.008" mode="readwrite">2/1/44</address>
+</trigger>
+</group>
+</group>
+<!--
+
+    <line/>
+    <group pagejumptarget="Temperaturen">
+	<text>Group PageJump</text> 
+        <toggle mapping="On_Off" styling="Red_Green">
+          <label>Toggle</label>
+          <address transform="DPT:1.001" mode="read" variant="">1/3/30</address>
+        </toggle>
+    </group>
+    <line/>
+    <group>
+	<text><label>Group No PageJump</label></text>
+        <toggle mapping="On_Off" styling="Red_Green">
+          <label>Toggle</label>
+          <address transform="DPT:1.001" mode="read" variant="">1/3/30</address>
+        </toggle>
+    </group>
+    <line/>
+-->
+<!--
+
+    <switch on_value="1" off_value="0" mapping="On_Off" styling="Blue_Green_Red">
+      <label>No address</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">1/3/202</address>
+    </switch>
+    <switch on_value="1" off_value="0" mapping="On_Off" styling="Blue_Green_Red">
+      <label>switch</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">1/3/30</address>
+    </switch>
+    <info>
+      <label>info</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">1/3/30</address>
+    </info>
+    <trigger value="1" mapping="KonnexHVAC">
+      <label>Trigger</label>
+      <address transform="DPT:1.002" mode="readwrite" variant="">1/3/30</address>
+    </trigger>
+    <multitrigger button1label="Label 1" button1value="1" button2label="Label 0" button2value="0" mapping="On_Off" styling="Blue_Green_Red">
+      <label>Multitrigger</label>
+      <address transform="DPT:1.002" mode="readwrite" variant="">1/3/30</address>
+    </multitrigger>
+    <designtoggle>designtoggle</designtoggle>
+    <infotrigger uplabel="Uplabel" upvalue="0" downlabel="Downlabel" downvalue="1" mapping="Close_Open" styling="Red_Green" infoposition="0" change="absolute">
+      <label>InfoTrigger</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">1/3/30</address>
+    </infotrigger>
+    <break/>
+    <infotrigger uplabel="AUF" upvalue="0" downlabel="AB" downvalue="1" align="center" infoposition="1" change="relative">
+      <label>Esszimmer</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="button">6/2/30</address>
+      <address transform="DPT:5.001" readonly="true" variant="display">6/2/33</address>
+    </infotrigger>
+    <trigger value="1" mapping="STOP">
+      <label>Essz.</label>
+      <address transform="DPT:1.001" mode="readwrite" variant="">6/2/31</address>
+    </trigger>
+-->
+<line/>
+<break/>
+<info mapping="WindText" styling="WindWarning">
+<label>Wind Staerke</label>
+<address transform="DPT:9.028" mode="readwrite" variant="Wind">7/5/102</address>
+</info>
+<info format="%.2f km/h">
+<label>Wind Geschwindigkeit</label>
+<address transform="DPT:9.028" mode="readwrite" variant="Wind">7/5/102</address>
+</info>
+<info mapping="WindText" styling="WindWarning">
+<label>Wind Staerke KS500</label>
+<address transform="DPT:9.028" mode="readwrite" variant="Wind">5/1/40</address>
+</info>
+<info format="%.2f km/h">
+<label>Wind Geschwindigkeit KS500</label>
+<address transform="DPT:9.028" mode="readwrite" variant="Wind">5/1/40</address>
+</info>
+<info mapping="Off_On">
+<label>Regen</label>
+<address transform="DPT:1.001" mode="readwrite" variant="Regen">7/5/103</address>
+</info>
+<info format="%.0f Lux">
+<label>Helligkeit</label>
+<address transform="DPT:9.001" mode="readwrite">7/5/100</address>
+</info>
+<info format="%.1f °C">
+<label>Außentemperatur WS</label>
+<address transform="DPT:9.001" mode="readwrite">7/5/101</address>
+</info>
+<info format="%.1f °C">
+<label>Außentemperatur KS500</label>
+<address transform="DPT:9.001" mode="readwrite">5/1/1</address>
+</info>
+<line/>
+<rsslog src="http://fs77f.net/rsslog/rsslog.php" width="600" height="300" refresh="30" content="true" datetime="true" mode="last" timeformat="%H:%M:%S - %d.%m.">
+<layout colspan="12"/>
+</rsslog>
+<line/>
+<web src="http://fs77f.net/status/windows.php" width="300px" height="530px" frameborder="false" background="#999999"/>
+<!--
+ <gweather width="700px" height="200px" refresh="60" city="Berlin" lang="de" current="false" forecast="true">gweather</gweather> 
+-->
+<break/>
+<web src="http://www.foreca.com/meteogram.php?loc_id=102812225&lang=de" width="300px"/>
+</page>
+</pages>

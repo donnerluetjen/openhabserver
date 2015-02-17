@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lib_version="8" design="metal" xsi:noNamespaceSchemaLocation="../visu_config.xsd" backend="oh">
+  <meta>
+		<icons>
+		<!-- in this section one can define links to user specific icons -->
+			<!-- This one is the link to the openHAB symbol for the navigation bar -->
+			<icon-definition name="openHAB" uri="../images/icon.png"/>
+		</icons>
+		<plugins>
+		<!-- this section defines the required plugins -->
+			<!-- strftime provides formated date and time strings -->
+			<plugin name="strftime"/>
+			<!-- timeout enables an automatic reload of webpages -->
+			<plugin name="timeout"/>
+      <plugin name="colorchooser"/>
+      <plugin name="diagram"/>
+      <plugin name="upnpcontroller"/>
+    </plugins>
+    <mappings>
+      <mapping name="Close_Open">
+        <entry value="0">zu</entry>
+        <entry value="1">offen</entry>
+      </mapping>
+      <mapping name="Open_Close">
+        <entry value="0">offen</entry>
+        <entry value="1">zu</entry>
+      </mapping>
+      <mapping name="Off_On">
+        <entry value="0">Aus</entry>
+        <entry value="1">An</entry>
+      </mapping>
+      <mapping name="On_Off">
+        <entry value="0">An</entry>
+        <entry value="1">Aus</entry>
+      </mapping>
+      <mapping name="KonnexHVAC">
+        <entry value="auto">Auto</entry>
+        <entry value="comfort">Komfort</entry>
+        <entry value="standby">Stand By</entry>
+        <entry value="economy">Economy</entry>
+        <entry value="building_protection">Haus-Schutz</entry>
+      </mapping>
+    </mappings>
+    <stylings>
+      <styling name="Red_Green">
+        <entry value="0">red</entry>
+        <entry value="1">green</entry>
+      </styling>
+      <styling name="Green_Red">
+        <entry value="0">green</entry>
+        <entry value="1">red</entry>
+      </styling>
+      <styling name="Blue_Green_Red">
+        <entry range_min="-100" range_max="20">blue</entry>
+        <entry range_min="20" range_max="22">green</entry>
+        <entry range_min="22" range_max="100">red</entry>
+      </styling>
+    </stylings>
+  </meta>
+  <page name="Start">
+		<!-- page "Start" will be reloaded every 60 seconds -->
+		<timeout time="60" target="Start"/>
+		<!-- the navbar is the top row navigation bar -->
+		<navbar position="top" dynamic="true" scope="1">
+		  <pagejump target="Start" align="center">
+			<layout colspan="1"/>
+			<label><icon name="control_home"/>Start</label>
+		  </pagejump>
+		  <pagejump target="openHABitems" align="center">
+				<layout colspan="1"/>
+				<label><icon name="openHAB"/>items</label>
+		  </pagejump>
+		</navbar>
+		<!-- main page -->
+		<group name="Current time" class="timeclass">
+		  <layout colspan="5"/>
+		  <group nowidget="true">
+			<layout colspan="5"/>
+			<strftime lang="en" format="%H:%M:%S" class="timebig">
+			  <layout colspan="6"/>
+			</strftime>
+			<break/>
+			<strftime lang="en" format="%A, %d. %B %Y" class="timedate">
+			  <layout colspan="6"/>
+			</strftime>
+			<break/>
+		  </group>
+		</group>
+		<break/>
+		<group name="Current weather" class="tempclass">
+		  <layout colspan="5"/>
+		  <group nowidget="true">
+			<layout colspan="5"/>
+			<info format="%.1f °C" class="bigtemp" align="center">
+			  <layout colspan="2.5"/>
+			  <label>
+				<icon name="temp_outside"/>
+			  </label>
+			  <address transform="OH:number">Current_Temp</address>
+			</info>
+			<break/>
+			<info format="%.1f hPa" class="midtemp" align="center">
+			  <layout colspan="5"/>
+			  <label>
+				<icon name="weather_barometric_pressure"/>
+			  </label>
+			  <address transform="OH:number">Pressure</address>
+			</info>
+			<break/>
+			<info format="%.1f km/h" class="midtemp" align="center">
+			  <layout colspan="4"/>
+			  <label>
+				<icon name="weather_wind"/>
+			  </label>
+			  <address transform="OH:number">Wind_Speed</address>
+			</info>
+			<info format="%.0f°" class="midtemp" align="center">
+			  <layout colspan="1"/>
+			  <address transform="OH:number">Weather_WindDirection</address>
+			</info>
+		  </group>
+		</group>
+		<group name="Upcoming Events">
+		  <layout colspan="4"/>
+		  <group nowidget="true">
+			<layout colspan="5"/>
+			<info>
+			  <layout colspan="2.5"/>
+				<label>Time</label>
+			</info>
+			<info>
+			  <layout colspan="2.5"/>
+				<label>Ansgar</label>
+			</info>
+			<info format="%.1f °C" class="bigtemp" align="center">
+			  <layout colspan="2.5"/>
+				<label>Elfi</label>
+			</info>
+			<info format="%.1f °C" class="bigtemp" align="center">
+			  <layout colspan="2.5"/>
+				<label>Sarah</label>
+			</info>
+			<break/>
+			<!-- <info format="%.1f hPa" class="midtemp" align="center">
+			  <layout colspan="5"/>
+			  <label>
+				<icon name="weather_barometric_pressure"/>
+			  </label>
+			  <address transform="OH:number">Weather_Pressure</address>
+			</info> -->
+			<break/>
+			<info format="%.1f km/h" class="midtemp" align="center">
+			  <layout colspan="4"/>
+			  <label>
+				<icon name="weather_wind"/>
+			  </label>
+			  <address transform="OH:number">Weather_WindSpeed</address>
+			</info>
+			<info format="%.0f°" class="midtemp" align="center">
+			  <layout colspan="1"/>
+			  <address transform="OH:number">Weather_WindDirection</address>
+			</info>
+		  </group>
+		</group>
+		<break/>
+		<!-- <group name="Weather forecast" align="center">
+			<layout colspan="5"/>
+			<image src="http://www.dwd.de/wundk/wetter/de/Suedwest.jpg" refresh="120">
+				<layout colspan="5"/>
+			</image>
+		</group> -->
+	<page name="openHABitems"  visible="false">
+
+		<group name="Number" class="weatherclass">
+			<layout colspan="6" />
+			<!-- This is a number item implementation -->
+			<info format="%.1f °C" align="center">
+			  <layout colspan="6"/>
+			  <label>
+				<icon name="temp_outside"/>
+			  </label>
+			  <address transform="OH:number">Weather_Temperature</address>
+			</info>
+		</group>
+		<break/>
+
+		<group name="Switch" class="weatherclass">
+			<layout colspan="6" />
+			<!-- This is a switch item implementation -->
+			<text align="left">
+				<layout colspan="2" />
+				<label><icon name="light_light" />Corridor GF</label>
+			</text>
+			<switch on_value="1" off_value="0" mapping="OnOffSymbol" styling="NeutralGreenBG" align="center">
+				<layout colspan="4" />
+				<address transform="OH:switch">GF_Light_Corridor</address>
+			</switch>
+		</group>
+		<break/>
+
+		<group name="Contact" class="weatherclass">
+			<!-- and this a contact item -->
+			<!-- the window state switches randomly between open and closed, see file cometVISU.rules -->
+			<text align="left">
+				<layout colspan="2" />
+				<label><icon name="scene_cooking" />Window kitchen</label>
+			</text>
+			<info mapping="OpenCloseWindowSymbol" styling="NeutralRedBG" align="center">
+				<layout colspan="4"/>
+				<address transform="OH:contact">GF_Window_Kitchen</address>
+			</info>
+		</group>
+		<break/>
+		<group name="Dimmer" class="weatherclass">
+			<!-- and a dimmer item -->
+			<!-- this is a sample for a graphical display of a numerical value -->
+			<info mapping="Dimmer" align="left">
+				<layout colspan="2" />
+				<address transform="OH:dimmer" mode="read">GF_Light_Dining_Dimmer</address>
+				<label>Spot Sofa</label>
+			</info>
+			<!-- and this is the slider control for the dimmer level -->
+			<slide min="0" max="100" step="1" format="%d%%" styling="GreyGrey" flavour="lithium">
+				<layout colspan="4" />
+				<address transform="OH:dimmer" mode="readwrite">GF_Light_Dining_Dimmer</address>
+			</slide>
+		</group>
+
+	</page>
+  </page>
+</pages>
